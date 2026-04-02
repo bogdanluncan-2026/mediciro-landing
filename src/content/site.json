@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "siteName": "MediRO",
+    "companyName": "Lunaxbit",
+    "companyUrl": "https://lunaxbit.ro",
+    "appUrl": "https://app.mediro.lunaxbit.ro",
+    "contactEmail": "contact@lunaxbit.ro"
+  },
+  "navbar": {
+    "links": [
+      { "label": "Funcționalități", "href": "#features" },
+      { "label": "Cum funcționează", "href": "#how-it-works" },
+      { "label": "Prețuri", "href": "#pricing" }
+    ],
+    "loginText": "Autentificare",
+    "ctaText": "Încearcă gratuit",
+    "ctaTextMobile": "Încearcă gratuit 30 zile"
+  },
+  "hero": {
+    "backgroundImage": "/hero-bg.png",
+    "badge": "Platforma #1 pentru clinici private din România",
+    "headline": "Programări medicale",
+    "headlineAccent": "simplu și modern",
+    "subtitle": "MediRO este platforma completă pentru clinici private — gestionează programările, doctorii și pacienții dintr-un singur loc. Fără birocrație.",
+    "ctaPrimary": {
+      "text": "Încearcă gratuit 30 zile",
+      "href": "https://app.mediro.lunaxbit.ro/register"
+    },
+    "ctaSecondary": {
+      "text": "Cum funcționează",
+      "href": "#how-it-works"
+    },
+    "trustSignals": "Fără card de credit necesar · Anulezi oricând · Setup foarte rapid si suport dedicat"
+  },
+  "features": {
+    "label": "Funcționalități",
+    "title": "Tot ce ai nevoie într-o singură platformă",
+    "subtitle": "MediRO a fost construit cu feedback direct de la clinici private românești, pentru a rezolva problemele reale din activitatea zilnică.",
+    "items": [
+      {
+        "icon": "calendar",
+        "title": "Programări Online",
+        "description": "Pacienții se programează direct din browser sau aplicație mobilă, 24/7. Calendarul tău se actualizează în timp real.",
+        "color": "blue"
+      },
+      {
+        "icon": "building",
+        "title": "Management Clinică",
+        "description": "Administrează doctori, specialități, săli de consultație și resurse din tabloul de bord centralizat.",
+        "color": "indigo"
+      },
+      {
+        "icon": "mobile",
+        "title": "Aplicație Mobilă",
+        "description": "iOS și Android disponibile pentru doctori și pacienți. Accesul la programări oriunde, oricând, fără laptop.",
+        "color": "violet"
+      },
+      {
+        "icon": "bell",
+        "title": "Notificări Automate",
+        "description": "SMS și email automat pentru confirmări, reminder-uri și anulări. Reduci no-show-urile cu până la 60%.",
+        "color": "sky"
+      }
+    ]
+  },
+  "howItWorks": {
+    "label": "Cum funcționează",
+    "title": "Pornești în 3 pași",
+    "subtitle": "Setup rapid, fără tehnicieni. Clinica ta funcționează online în mai puțin de 10 minute.",
+    "steps": [
+      {
+        "number": 1,
+        "icon": "building",
+        "title": "Înregistrează clinica",
+        "description": "Creează contul clinicii tale în câteva minute. Adaugă datele de contact, programul și serviciile oferite."
+      },
+      {
+        "number": 2,
+        "icon": "users",
+        "title": "Adaugă doctorii",
+        "description": "Invită medicii din clinică, definește specialitățile și orarul de lucru. Fiecare doctor are propriul calendar."
+      },
+      {
+        "number": 3,
+        "icon": "checkCircle",
+        "title": "Pacienții programează",
+        "description": "Pacienții accesează pagina clinicii, aleg doctorul și intervalul disponibil. Confirmarea vine instant."
+      }
+    ],
+    "cta": {
+      "text": "Începe acum — gratuit 30 zile",
+      "href": "https://app.mediro.lunaxbit.ro/register"
+    }
+  },
+  "screenshots": {
+    "label": "Interfață",
+    "title": "Conceput pentru ușurință în utilizare",
+    "subtitle": "Design clar și intuitiv — doctorii și personalul clinicii se acomodează în câteva minute.",
+    "appUrl": "app.mediro.lunaxbit.ro",
+    "placeholderText": "Screenshot disponibil în curând",
+    "images": [
+      {
+        "caption": "Dashboard Clinică",
+        "description": "Vizualizează toate programările zilei, alertele și statisticile clinicii.",
+        "gradientColor": "from-blue-500 to-indigo-600",
+        "accentColor": "bg-blue-400"
+      },
+      {
+        "caption": "Calendar Doctor",
+        "description": "Calendarul personal al medicului cu slot-uri libere și ocupate.",
+        "gradientColor": "from-indigo-500 to-violet-600",
+        "accentColor": "bg-indigo-400"
+      },
+      {
+        "caption": "Programare Pacient",
+        "description": "Fluxul simplu prin care pacientul alege doctorul și intervalul orar.",
+        "gradientColor": "from-sky-500 to-blue-600",
+        "accentColor": "bg-sky-400"
+      }
+    ]
+  },
+  "pricing": {
+    "label": "Prețuri",
+    "title": "Planuri clare, fără surprize",
+    "subtitleBefore": "Toate planurile includ",
+    "subtitleStrong": "30 de zile gratuite",
+    "subtitleAfter": ". Nu este nevoie de card de credit pentru a începe.",
+    "footnote": "Prețurile nu includ TVA. Facturare lunară sau anuală (reducere 20% anual).",
+    "plans": [
+      {
+        "name": "Basic",
+        "price": "99",
+        "currency": "RON",
+        "period": "/lună",
+        "description": "Perfect pentru o clinică cu 1-3 doctori care abia începe digitalizarea.",
+        "features": [
+          "Până la 3 doctori",
+          "Programări online nelimitate",
+          "Notificări SMS & email",
+          "Aplicație mobilă",
+          "Suport prin email"
+        ],
+        "ctaText": "Începe gratuit",
+        "ctaHref": "https://app.mediro.lunaxbit.ro/register",
+        "highlighted": false,
+        "badge": null
+      },
+      {
+        "name": "Pro",
+        "price": "249",
+        "currency": "RON",
+        "period": "/lună",
+        "description": "Soluția completă pentru clinici medii care vor să crească.",
+        "features": [
+          "Până la 15 doctori",
+          "Programări online nelimitate",
+          "Notificări SMS & email",
+          "Aplicație mobilă",
+          "Dashboard analytics avansat",
+          "Gestionare facturi",
+          "Suport prioritar"
+        ],
+        "ctaText": "Începe gratuit 30 zile",
+        "ctaHref": "https://app.mediro.lunaxbit.ro/register",
+        "highlighted": true,
+        "badge": "Cel mai popular · 30 zile GRATUIT"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "currency": "",
+        "period": "",
+        "description": "Soluție dedicată pentru rețele de clinici cu nevoi specifice.",
+        "features": [
+          "Doctori nelimitați",
+          "Branding personalizat",
+          "Integrări API custom",
+          "SLA garantat 99.9%",
+          "Manager dedicat",
+          "Onboarding personalizat",
+          "Suport 24/7"
+        ],
+        "ctaText": "Contactează-ne",
+        "ctaHref": "mailto:contact@lunaxbit.ro",
+        "highlighted": false,
+        "badge": null
+      }
+    ]
+  },
+  "finalCta": {
+    "badge": "30 zile gratuite · Fără card de credit",
+    "title": "Pregătit să modernizezi clinica ta?",
+    "subtitle": "Alătură-te sutelor de clinici din România care folosesc MediRO pentru a gestiona mai eficient programările și pacienții.",
+    "ctaPrimary": {
+      "text": "Înregistrează clinica",
+      "href": "https://app.mediro.lunaxbit.ro/register"
+    },
+    "ctaSecondary": {
+      "text": "Contactează-ne",
+      "href": "mailto:contact@lunaxbit.ro"
+    }
+  },
+  "footer": {
+    "description": "Platforma de programări medicale online pentru clinici private din România.",
+    "developedBy": "Dezvoltat cu grijă de",
+    "columns": [
+      {
+        "title": "Produs",
+        "links": [
+          { "label": "Funcționalități", "href": "#features" },
+          { "label": "Prețuri", "href": "#pricing" },
+          { "label": "Cum funcționează", "href": "#how-it-works" },
+          { "label": "Aplicație", "href": "https://app.mediro.lunaxbit.ro" }
+        ]
+      },
+      {
+        "title": "Companie",
+        "links": [
+          { "label": "Lunaxbit", "href": "https://www.lunaxbit.ro" },
+          { "label": "Contact", "href": "mailto:contact@lunaxbit.ro" },
+          { "label": "Termeni & Condiții", "href": "#" },
+          { "label": "GDPR / Confidențialitate", "href": "#" }
+        ]
+      },
+      {
+        "title": "Suport",
+        "links": [
+          { "label": "Documentație", "href": "#" },
+          { "label": "Ghid de start", "href": "#" },
+          { "label": "support@mediro.ro", "href": "mailto:support@mediro.ro" }
+        ]
+      }
+    ],
+    "statusText": "Toate sistemele funcționează normal",
+    "copyright": "© {year} {company} SRL. Toate drepturile rezervate."
+  }
+}
