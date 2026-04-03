@@ -1,0 +1,6 @@
+{
+  "RedirectAllRequestsTo": {
+    "HostName": "www.lunaxbit.ro",
+    "Protocol": "https"
+  }
+}
