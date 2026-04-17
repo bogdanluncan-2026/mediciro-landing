@@ -27,7 +27,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="text-xl font-bold tracking-tight">
-                Medi<span className="text-accent">RO</span>
+                Medici<span className="text-accent">RO</span>
               </span>
             </a>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">{footer.description}</p>

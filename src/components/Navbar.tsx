@@ -38,7 +38,7 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="text-xl font-bold text-ink tracking-tight">
-              Medi<span className="text-accent">RO</span>
+              Medici<span className="text-accent">RO</span>
             </span>
           </a>
 

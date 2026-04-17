@@ -19,49 +19,15 @@ function MockScreen({
       transition={{ duration: 0.7, delay: index * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
       className="flex flex-col"
     >
-      {/* Browser mockup */}
+      {/* Screenshot */}
       <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-2xl shadow-gray-200/60">
-        {/* Browser bar */}
-        <div className="flex items-center gap-1.5 px-4 py-3 bg-gray-50 border-b border-gray-200">
-          <div className="w-3 h-3 rounded-full bg-red-400" />
-          <div className="w-3 h-3 rounded-full bg-yellow-400" />
-          <div className="w-3 h-3 rounded-full bg-green-400" />
-          <div className="flex-1 mx-4">
-            <div className="h-5 rounded-md bg-white border border-gray-200 px-3 flex items-center">
-              <span className="text-xs text-gray-400">{content.screenshots.appUrl}</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Screen content placeholder */}
-        <div className={`relative h-52 sm:h-64 bg-gradient-to-br ${screen.gradientColor} flex items-center justify-center overflow-hidden`}>
-          {/* Simulated UI elements */}
-          <div className="absolute inset-0 p-4 flex flex-col gap-2 opacity-30">
-            <div className="flex gap-2">
-              <div className="w-24 h-6 rounded bg-white/40" />
-              <div className="w-16 h-6 rounded bg-white/20" />
-            </div>
-            <div className="flex gap-2 mt-1">
-              {[...Array(5)].map((_, i) => (
-                <div key={i} className="flex-1 h-28 rounded-lg bg-white/20" />
-              ))}
-            </div>
-            <div className="flex gap-2">
-              <div className="flex-1 h-8 rounded bg-white/30" />
-              <div className="flex-1 h-8 rounded bg-white/20" />
-              <div className="flex-1 h-8 rounded bg-white/30" />
-            </div>
-          </div>
-
-          {/* Label */}
-          <div className="relative text-center">
-            <div className={`inline-flex w-14 h-14 rounded-2xl ${screen.accentColor} bg-opacity-80 items-center justify-center mb-3 mx-auto`}>
-              <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <p className="text-white font-semibold text-sm">{content.screenshots.placeholderText}</p>
-          </div>
+        <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
+          <img
+            src={screen.image}
+            alt={screen.caption}
+            className="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
         </div>
       </div>
 

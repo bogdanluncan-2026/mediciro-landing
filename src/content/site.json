@@ -1,9 +1,9 @@
 {
   "meta": {
-    "siteName": "MediRO",
+    "siteName": "MediciRO",
     "companyName": "Lunaxbit",
     "companyUrl": "https://lunaxbit.ro",
-    "appUrl": "https://app.mediro.lunaxbit.ro",
+    "appUrl": "https://mediciro.lunaxbit.ro",
     "contactEmail": "contact@lunaxbit.ro"
   },
   "navbar": {
@@ -21,10 +21,10 @@
     "badge": "Platforma #1 pentru clinici private din România",
     "headline": "Programări medicale",
     "headlineAccent": "simplu și modern",
-    "subtitle": "MediRO este platforma completă pentru clinici private — gestionează programările, doctorii și pacienții dintr-un singur loc. Fără birocrație.",
+    "subtitle": "MediciRO este platforma completă pentru clinici private — gestionează programările, doctorii și pacienții dintr-un singur loc. Fără birocrație.",
     "ctaPrimary": {
       "text": "Încearcă gratuit 30 zile",
-      "href": "https://app.mediro.lunaxbit.ro/register"
+      "href": "https://mediciro.lunaxbit.ro/register"
     },
     "ctaSecondary": {
       "text": "Cum funcționează",
@@ -35,7 +35,7 @@
   "features": {
     "label": "Funcționalități",
     "title": "Tot ce ai nevoie într-o singură platformă",
-    "subtitle": "MediRO a fost construit cu feedback direct de la clinici private românești, pentru a rezolva problemele reale din activitatea zilnică.",
+    "subtitle": "MediciRO a fost construit cu feedback direct de la clinici private românești, pentru a rezolva problemele reale din activitatea zilnică.",
     "items": [
       {
         "icon": "calendar",
@@ -89,33 +89,30 @@
     ],
     "cta": {
       "text": "Începe acum — gratuit 30 zile",
-      "href": "https://app.mediro.lunaxbit.ro/register"
+      "href": "https://mediciro.lunaxbit.ro/register"
     }
   },
   "screenshots": {
     "label": "Interfață",
     "title": "Conceput pentru ușurință în utilizare",
     "subtitle": "Design clar și intuitiv — doctorii și personalul clinicii se acomodează în câteva minute.",
-    "appUrl": "app.mediro.lunaxbit.ro",
+    "appUrl": "mediciro.lunaxbit.ro",
     "placeholderText": "Screenshot disponibil în curând",
     "images": [
       {
         "caption": "Dashboard Clinică",
         "description": "Vizualizează toate programările zilei, alertele și statisticile clinicii.",
-        "gradientColor": "from-blue-500 to-indigo-600",
-        "accentColor": "bg-blue-400"
+        "image": "/screenshots/dashboard-rapoarte-clinica.png"
       },
       {
         "caption": "Calendar Doctor",
         "description": "Calendarul personal al medicului cu slot-uri libere și ocupate.",
-        "gradientColor": "from-indigo-500 to-violet-600",
-        "accentColor": "bg-indigo-400"
+        "image": "/screenshots/orar-doctor.png"
       },
       {
         "caption": "Programare Pacient",
         "description": "Fluxul simplu prin care pacientul alege doctorul și intervalul orar.",
-        "gradientColor": "from-sky-500 to-blue-600",
-        "accentColor": "bg-sky-400"
+        "image": "/screenshots/calendar-programare-pacient.png"
       }
     ]
   },
@@ -141,7 +138,7 @@
           "Suport prin email"
         ],
         "ctaText": "Începe gratuit",
-        "ctaHref": "https://app.mediro.lunaxbit.ro/register",
+        "ctaHref": "https://mediciro.lunaxbit.ro/register",
         "highlighted": false,
         "badge": null
       },
@@ -161,7 +158,7 @@
           "Suport prioritar"
         ],
         "ctaText": "Începe gratuit 30 zile",
-        "ctaHref": "https://app.mediro.lunaxbit.ro/register",
+        "ctaHref": "https://mediciro.lunaxbit.ro/register",
         "highlighted": true,
         "badge": "Cel mai popular · 30 zile GRATUIT"
       },
@@ -190,10 +187,10 @@
   "finalCta": {
     "badge": "30 zile gratuite · Fără card de credit",
     "title": "Pregătit să modernizezi clinica ta?",
-    "subtitle": "Alătură-te sutelor de clinici din România care folosesc MediRO pentru a gestiona mai eficient programările și pacienții.",
+    "subtitle": "Alătură-te sutelor de clinici din România care folosesc MediciRO pentru a gestiona mai eficient programările și pacienții.",
     "ctaPrimary": {
       "text": "Înregistrează clinica",
-      "href": "https://app.mediro.lunaxbit.ro/register"
+      "href": "https://mediciro.lunaxbit.ro/register"
     },
     "ctaSecondary": {
       "text": "Contactează-ne",
@@ -210,7 +207,7 @@
           { "label": "Funcționalități", "href": "#features" },
           { "label": "Prețuri", "href": "#pricing" },
           { "label": "Cum funcționează", "href": "#how-it-works" },
-          { "label": "Aplicație", "href": "https://app.mediro.lunaxbit.ro" }
+          { "label": "Aplicație", "href": "https://mediciro.lunaxbit.ro" }
         ]
       },
       {
@@ -227,7 +224,7 @@
         "links": [
           { "label": "Documentație", "href": "#" },
           { "label": "Ghid de start", "href": "#" },
-          { "label": "support@mediro.ro", "href": "mailto:support@mediro.ro" }
+          { "label": "contact@lunaxbit.ro", "href": "mailto:contact@lunaxbit.ro" }
         ]
       }
     ],
