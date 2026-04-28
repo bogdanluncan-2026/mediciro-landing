@@ -12,25 +12,64 @@
       { "label": "Cum funcționează", "href": "#how-it-works" },
       { "label": "Prețuri", "href": "#pricing" }
     ],
-    "loginText": "Autentificare",
-    "ctaText": "Încearcă gratuit",
-    "ctaTextMobile": "Încearcă gratuit 30 zile"
+    "loginDropdown": {
+      "label": "Autentificare",
+      "items": [
+        { "label": "Clinică", "href": "https://app.mediciro.ro/login" },
+        { "label": "Pacient", "href": "https://app.mediciro.ro/patient/login" }
+      ]
+    }
   },
   "hero": {
     "backgroundImage": "/hero-bg.png",
     "badge": "Platforma #1 pentru clinici private din România",
-    "headline": "Programări medicale",
-    "headlineAccent": "simplu și modern",
-    "subtitle": "MediciRO este platforma completă pentru clinici private — gestionează programările, doctorii și pacienții dintr-un singur loc. Fără birocrație.",
-    "ctaPrimary": {
-      "text": "Încearcă gratuit 30 zile",
-      "href": "https://app.mediciro.ro/register"
+    "headline": "Programări medicale,",
+    "headlineAccent": "simplu pentru toată lumea",
+    "subtitle": "Pentru clinici care vor să fie moderne și pentru pacienții care vor să se programeze rapid, fără telefoane.",
+    "trustSignals": "30 zile gratuit · Anulezi oricând · Setup rapid și suport dedicat",
+    "clinicCard": {
+      "label": "Pentru clinici",
+      "title": "Modernizează-ți clinica",
+      "description": "Gestionează programări, doctori și pacienți dintr-un singur loc.",
+      "trustLine": "De la 99 RON/lună · 30 zile gratuit · anulezi oricând",
+      "primaryCta": {
+        "text": "Înregistrează clinica",
+        "href": "https://app.mediciro.ro/register"
+      },
+      "secondaryCta": {
+        "text": "Autentificare",
+        "href": "https://app.mediciro.ro/login"
+      }
     },
-    "ctaSecondary": {
-      "text": "Cum funcționează",
-      "href": "#how-it-works"
-    },
-    "trustSignals": "Fără card de credit necesar · Anulezi oricând · Setup foarte rapid si suport dedicat"
+    "patientCard": {
+      "label": "Pentru pacienți",
+      "title": "Programează-te online",
+      "description": "Găsește doctorul, alege intervalul orar și confirmă în 30 de secunde.",
+      "trustLine": "100% gratuit · fără reclame · pentru totdeauna",
+      "primaryCta": {
+        "text": "Cont nou",
+        "href": "https://app.mediciro.ro/patient/register"
+      },
+      "secondaryCta": {
+        "text": "Autentificare",
+        "href": "https://app.mediciro.ro/patient/login"
+      }
+    }
+  },
+  "patientBanner": {
+    "label": "Pentru pacienți",
+    "title": "100% gratuit, pentru totdeauna",
+    "subtitle": "Aplicația MediciRO pentru pacienți este și va rămâne complet gratuită — fără abonament, fără reclame, fără surprize.",
+    "highlights": [
+      { "icon": "free", "text": "Fără cost, niciodată" },
+      { "icon": "noAds", "text": "Fără reclame" },
+      { "icon": "clean", "text": "Interfață curată și intuitivă" },
+      { "icon": "fast", "text": "Programare în 30 de secunde" }
+    ],
+    "cta": {
+      "text": "Creează cont gratuit",
+      "href": "https://app.mediciro.ro/patient/register"
+    }
   },
   "features": {
     "label": "Funcționalități",
@@ -83,7 +122,7 @@
       {
         "number": 3,
         "icon": "checkCircle",
-        "title": "Pacienții programează",
+        "title": "Pacienții se programează",
         "description": "Pacienții accesează pagina clinicii, aleg doctorul și intervalul disponibil. Confirmarea vine instant."
       }
     ],
@@ -121,11 +160,12 @@
     "title": "Planuri clare, fără surprize",
     "subtitleBefore": "Toate planurile includ",
     "subtitleStrong": "30 de zile gratuite",
-    "subtitleAfter": ". Nu este nevoie de card de credit pentru a începe.",
-    "footnote": "Prețurile nu includ TVA. Facturare lunară sau anuală (reducere 20% anual).",
+    "subtitleAfter": ". Anulezi oricând în primele 30 de zile.",
+    "footnote": "Facturare lunară sau anuală (reducere 10% anual) · Plată cu card sau transfer bancar",
     "plans": [
       {
         "name": "Basic",
+        "pricePrefix": "",
         "price": "99",
         "currency": "RON",
         "period": "/lună",
@@ -144,17 +184,18 @@
       },
       {
         "name": "Pro",
-        "price": "249",
+        "pricePrefix": "",
+        "price": "299",
         "currency": "RON",
         "period": "/lună",
         "description": "Soluția completă pentru clinici medii care vor să crească.",
         "features": [
           "Până la 15 doctori",
           "Programări online nelimitate",
+          "Recepție cu programări manuale",
           "Notificări SMS & email",
           "Aplicație mobilă",
-          "Dashboard analytics avansat",
-          "Gestionare facturi",
+          "Rapoarte avansate",
           "Suport prioritar"
         ],
         "ctaText": "Începe gratuit 30 zile",
@@ -164,18 +205,18 @@
       },
       {
         "name": "Enterprise",
-        "price": "Custom",
-        "currency": "",
-        "period": "",
-        "description": "Soluție dedicată pentru rețele de clinici cu nevoi specifice.",
+        "pricePrefix": "De la",
+        "price": "1.499",
+        "currency": "RON",
+        "period": "/lună",
+        "description": "Soluție dedicată pentru rețele de clinici. Funcționalități custom evaluate la cerere.",
         "features": [
           "Doctori nelimitați",
           "Branding personalizat",
+          "Funcționalități la cerere (preț individualizat)",
           "Integrări API custom",
-          "SLA garantat 99.9%",
           "Manager dedicat",
-          "Onboarding personalizat",
-          "Suport 24/7"
+          "Onboarding asistat"
         ],
         "ctaText": "Contactează-ne",
         "ctaHref": "mailto:contact@mediciro.ro",
@@ -185,7 +226,7 @@
     ]
   },
   "finalCta": {
-    "badge": "30 zile gratuite · Fără card de credit",
+    "badge": "30 zile gratuite · Anulezi oricând",
     "title": "Pregătit să modernizezi clinica ta?",
     "subtitle": "Alătură-te sutelor de clinici din România care folosesc MediciRO pentru a gestiona mai eficient programările și pacienții.",
     "ctaPrimary": {

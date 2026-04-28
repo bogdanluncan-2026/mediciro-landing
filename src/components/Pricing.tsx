@@ -41,6 +41,11 @@ function PricingCard({
       </div>
 
       <div className="mb-8">
+        {plan.pricePrefix && (
+          <div className={`text-xs font-semibold uppercase tracking-wider mb-1 ${plan.highlighted ? 'text-blue-200' : 'text-gray-400'}`}>
+            {plan.pricePrefix}
+          </div>
+        )}
         {plan.currency === '' ? (
           <span className={`text-4xl font-black ${plan.highlighted ? 'text-white' : 'text-ink'}`}>
             {plan.price}
