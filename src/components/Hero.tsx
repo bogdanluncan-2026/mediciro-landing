@@ -14,6 +14,24 @@ const item = {
   show: { opacity: 1, y: 0, scale: 1, transition: { duration: 1, ease: [0.25, 0.1, 0.25, 1] } },
 }
 
+const ClinicIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h6" />
+  </svg>
+)
+
+const PatientIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+  </svg>
+)
+
+const ArrowIcon = () => (
+  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  </svg>
+)
+
 export default function Hero() {
   const { hero } = content
 
@@ -53,7 +71,7 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-10 max-w-4xl mx-auto"
+        className="relative z-10 max-w-5xl mx-auto"
       >
         {/* Badge */}
         <motion.div variants={item} className="inline-flex items-center gap-2 mb-8">
@@ -66,7 +84,7 @@ export default function Hero() {
         {/* Headline */}
         <motion.h1
           variants={item}
-          className="text-6xl sm:text-7xl lg:text-[5.5rem] font-black tracking-[-0.03em] text-ink leading-[1.0] text-balance"
+          className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-[-0.03em] text-ink leading-[1.05] text-balance"
         >
           {hero.headline}
           <br />
@@ -81,26 +99,88 @@ export default function Hero() {
           {hero.subtitle}
         </motion.p>
 
-        {/* CTAs */}
+        {/* Audience cards */}
         <motion.div
           variants={item}
-          className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center"
+          className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto"
         >
-          <a
-            href={hero.ctaPrimary.href}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-semibold text-base hover:bg-accent transition-all duration-200 shadow-lg shadow-primary/25 hover:shadow-accent/30 hover:scale-[1.02] active:scale-[0.98]"
-          >
-            {hero.ctaPrimary.text}
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-          <a
-            href={hero.ctaSecondary.href}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-gray-200 text-ink font-semibold text-base hover:border-gray-300 hover:bg-gray-50 transition-all duration-200"
-          >
-            {hero.ctaSecondary.text}
-          </a>
+          {/* Clinic card */}
+          <div className="group relative bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200/60 p-7 text-left transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                <ClinicIcon />
+              </div>
+              <span className="text-xs font-bold uppercase tracking-wider text-primary/70">
+                {hero.clinicCard.label}
+              </span>
+            </div>
+            <h3 className="text-2xl font-bold text-ink tracking-tight mt-3">
+              {hero.clinicCard.title}
+            </h3>
+            <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+              {hero.clinicCard.description}
+            </p>
+            <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-primary">
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              {hero.clinicCard.trustLine}
+            </p>
+            <div className="mt-6 flex flex-col gap-2">
+              <a
+                href={hero.clinicCard.primaryCta.href}
+                className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full bg-primary text-white font-semibold text-sm hover:bg-accent transition-all duration-200 shadow-md shadow-primary/20"
+              >
+                {hero.clinicCard.primaryCta.text}
+                <ArrowIcon />
+              </a>
+              <a
+                href={hero.clinicCard.secondaryCta.href}
+                className="text-center text-sm text-gray-500 hover:text-ink transition-colors py-2"
+              >
+                Ai cont? <span className="font-semibold underline-offset-4 hover:underline">{hero.clinicCard.secondaryCta.text}</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Patient card */}
+          <div className="group relative bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200/60 p-7 text-left transition-all duration-300 hover:border-emerald-400/50 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                <PatientIcon />
+              </div>
+              <span className="text-xs font-bold uppercase tracking-wider text-emerald-700/80">
+                {hero.patientCard.label}
+              </span>
+            </div>
+            <h3 className="text-2xl font-bold text-ink tracking-tight mt-3">
+              {hero.patientCard.title}
+            </h3>
+            <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+              {hero.patientCard.description}
+            </p>
+            <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700">
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              {hero.patientCard.trustLine}
+            </p>
+            <div className="mt-6 flex flex-col gap-2">
+              <a
+                href={hero.patientCard.primaryCta.href}
+                className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold text-sm hover:bg-emerald-600 transition-all duration-200 shadow-md shadow-emerald-500/25"
+              >
+                {hero.patientCard.primaryCta.text}
+                <ArrowIcon />
+              </a>
+              <a
+                href={hero.patientCard.secondaryCta.href}
+                className="text-center text-sm text-gray-500 hover:text-ink transition-colors py-2"
+              >
+                Ai cont? <span className="font-semibold underline-offset-4 hover:underline">{hero.patientCard.secondaryCta.text}</span>
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         {/* Social proof */}
