@@ -1,10 +1,10 @@
 {
   "meta": {
     "siteName": "MediciRO",
-    "companyName": "Lunaxbit",
-    "companyUrl": "https://lunaxbit.ro",
-    "appUrl": "https://mediciro.lunaxbit.ro",
-    "contactEmail": "contact@lunaxbit.ro"
+    "companyName": "MediciRO",
+    "companyUrl": "https://mediciro.ro",
+    "appUrl": "https://app.mediciro.ro",
+    "contactEmail": "contact@mediciro.ro"
   },
   "navbar": {
     "links": [
@@ -24,7 +24,7 @@
     "subtitle": "MediciRO este platforma completă pentru clinici private — gestionează programările, doctorii și pacienții dintr-un singur loc. Fără birocrație.",
     "ctaPrimary": {
       "text": "Încearcă gratuit 30 zile",
-      "href": "https://mediciro.lunaxbit.ro/register"
+      "href": "https://app.mediciro.ro/register"
     },
     "ctaSecondary": {
       "text": "Cum funcționează",
@@ -89,14 +89,14 @@
     ],
     "cta": {
       "text": "Începe acum — gratuit 30 zile",
-      "href": "https://mediciro.lunaxbit.ro/register"
+      "href": "https://app.mediciro.ro/register"
     }
   },
   "screenshots": {
     "label": "Interfață",
     "title": "Conceput pentru ușurință în utilizare",
     "subtitle": "Design clar și intuitiv — doctorii și personalul clinicii se acomodează în câteva minute.",
-    "appUrl": "mediciro.lunaxbit.ro",
+    "appUrl": "app.mediciro.ro",
     "placeholderText": "Screenshot disponibil în curând",
     "images": [
       {
@@ -138,7 +138,7 @@
           "Suport prin email"
         ],
         "ctaText": "Începe gratuit",
-        "ctaHref": "https://mediciro.lunaxbit.ro/register",
+        "ctaHref": "https://app.mediciro.ro/register",
         "highlighted": false,
         "badge": null
       },
@@ -158,7 +158,7 @@
           "Suport prioritar"
         ],
         "ctaText": "Începe gratuit 30 zile",
-        "ctaHref": "https://mediciro.lunaxbit.ro/register",
+        "ctaHref": "https://app.mediciro.ro/register",
         "highlighted": true,
         "badge": "Cel mai popular · 30 zile GRATUIT"
       },
@@ -178,7 +178,7 @@
           "Suport 24/7"
         ],
         "ctaText": "Contactează-ne",
-        "ctaHref": "mailto:contact@lunaxbit.ro",
+        "ctaHref": "mailto:contact@mediciro.ro",
         "highlighted": false,
         "badge": null
       }
@@ -190,11 +190,11 @@
     "subtitle": "Alătură-te sutelor de clinici din România care folosesc MediciRO pentru a gestiona mai eficient programările și pacienții.",
     "ctaPrimary": {
       "text": "Înregistrează clinica",
-      "href": "https://mediciro.lunaxbit.ro/register"
+      "href": "https://app.mediciro.ro/register"
     },
     "ctaSecondary": {
       "text": "Contactează-ne",
-      "href": "mailto:contact@lunaxbit.ro"
+      "href": "mailto:contact@mediciro.ro"
     }
   },
   "footer": {
@@ -207,14 +207,13 @@
           { "label": "Funcționalități", "href": "#features" },
           { "label": "Prețuri", "href": "#pricing" },
           { "label": "Cum funcționează", "href": "#how-it-works" },
-          { "label": "Aplicație", "href": "https://mediciro.lunaxbit.ro" }
+          { "label": "Aplicație", "href": "https://app.mediciro.ro" }
         ]
       },
       {
         "title": "Companie",
         "links": [
-          { "label": "Lunaxbit", "href": "https://www.lunaxbit.ro" },
-          { "label": "Contact", "href": "mailto:contact@lunaxbit.ro" },
+          { "label": "Contact", "href": "mailto:contact@mediciro.ro" },
           { "label": "Termeni & Condiții", "href": "#" },
           { "label": "GDPR / Confidențialitate", "href": "#" }
         ]
@@ -224,7 +223,7 @@
         "links": [
           { "label": "Documentație", "href": "#" },
           { "label": "Ghid de start", "href": "#" },
-          { "label": "contact@lunaxbit.ro", "href": "mailto:contact@lunaxbit.ro" }
+          { "label": "contact@mediciro.ro", "href": "mailto:contact@mediciro.ro" }
         ]
       }
     ],

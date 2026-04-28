@@ -1,16 +1,17 @@
-# lunaxbit-landing
+# mediciro-landing
 
-Site de prezentare pentru aplicația MediRO, dezvoltat de Lunaxbit (lunaxbit.ro).
+Site de prezentare pentru aplicația MediciRO — programări medicale online pentru clinici private din România.
 
 ## Despre
-- Site static SPA hostat pe www.lunaxbit.ro
-- Prezintă platforma MediRO — programări medicale online pentru clinici private din România
+- Site static SPA hostat pe mediciro.ro (S3 + CloudFront)
+- Prezintă platforma MediciRO
 - Stack: React + Vite + Tailwind CSS + Framer Motion
 
 ## Links
-- Aplicație: https://app.mediro.lunaxbit.ro
-- API: https://api.mediro.lunaxbit.ro
-- Owner: Bogdan Luncan (Lunaxbit)
+- Landing: https://mediciro.ro
+- Aplicație: https://app.mediciro.ro
+- API: https://api.mediciro.ro
+- Owner: Bogdan Luncan
 
 ## Design System
 - Inspirație: apple.com — minimalist, spațios, animații subtile la scroll
@@ -45,5 +46,5 @@ Iconițele în `features` și `howItWorks` sunt mapate în componentă via `icon
 Culorile cardurilor din `features` sunt mapate via `colorMap` (valori: `blue`, `indigo`, `violet`, `sky`).
 
 ## Deploy
-- S3 + CloudFront pe www.lunaxbit.ro
-- Bucket S3: (de completat)
+- S3 + CloudFront pe mediciro.ro
+- Bucket S3: `mediciro.ro` (eu-central-1)
