@@ -223,7 +223,22 @@
         "highlighted": false,
         "badge": null
       }
-    ]
+    ],
+    "addon": {
+      "name": "Notificări WhatsApp",
+      "price": "99",
+      "currency": "RON",
+      "period": "/lună",
+      "description": "Trimite notificări automate pacienților prin WhatsApp: confirmare programare, reminder cu 24h înainte și notificare anulare.",
+      "features": [
+        "Confirmare programare",
+        "Reminder 24h înainte",
+        "Notificare anulare",
+        "Outbound only (fără chat)"
+      ],
+      "ctaText": "Adaugă la abonament",
+      "ctaHref": "mailto:contact@mediciro.ro"
+    }
   },
   "finalCta": {
     "badge": "30 zile gratuite · Anulezi oricând",
