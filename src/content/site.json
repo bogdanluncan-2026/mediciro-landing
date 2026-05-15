@@ -10,7 +10,8 @@
     "links": [
       { "label": "Funcționalități", "href": "#features" },
       { "label": "Cum funcționează", "href": "#how-it-works" },
-      { "label": "Prețuri", "href": "#pricing" }
+      { "label": "Prețuri", "href": "#pricing" },
+      { "label": "Documentație", "href": "#", "isDocsLink": true }
     ],
     "loginDropdown": {
       "label": "Autentificare",
