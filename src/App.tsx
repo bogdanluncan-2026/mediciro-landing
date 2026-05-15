@@ -31,7 +31,7 @@ export default function App() {
             <Pricing />
             <FinalCTA />
           </main>
-          <Footer />
+          <Footer onDocsClick={() => setDocsOpen(true)} />
         </>
       )}
     </div>

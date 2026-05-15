@@ -241,6 +241,41 @@
       "ctaHref": "mailto:contact@mediciro.ro"
     }
   },
+  "docs": {
+    "label": "Documentație",
+    "title": "Ghiduri de utilizare",
+    "subtitle": "Descarcă ghidul potrivit rolului tău și începe să folosești platforma în câteva minute.",
+    "guides": [
+      {
+        "role": "Administrator Clinică",
+        "icon": "building",
+        "color": "blue",
+        "description": "Înregistrare, gestionare doctori, programări, setări clinică și abonament.",
+        "file": "/docs/Ghid_Administrator_Clinica.docx"
+      },
+      {
+        "role": "Recepție / Frontdesk",
+        "icon": "users",
+        "color": "green",
+        "description": "Creare și gestionare programări manuale, confirmare, anulare și lucrul cu pacienții.",
+        "file": "/docs/Ghid_Receptie.docx"
+      },
+      {
+        "role": "Doctor",
+        "icon": "stethoscope",
+        "color": "purple",
+        "description": "Activare cont, setare program de lucru, vizualizare programări și teleconsultații.",
+        "file": "/docs/Ghid_Doctor.docx"
+      },
+      {
+        "role": "Pacient",
+        "icon": "heart",
+        "color": "orange",
+        "description": "Creare cont, cum faci o programare online și cum intri la o teleconsultație.",
+        "file": "/docs/Ghid_Pacient.docx"
+      }
+    ]
+  },
   "finalCta": {
     "badge": "30 zile gratuite · Anulezi oricând",
     "title": "Pregătit să modernizezi clinica ta?",

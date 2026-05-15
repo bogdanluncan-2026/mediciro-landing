@@ -1,6 +1,6 @@
 import content from '../content'
 
-export default function Footer() {
+export default function Footer({ onDocsClick }: { onDocsClick?: () => void }) {
   const { footer, meta } = content
 
   const copyright = footer.copyright
@@ -49,12 +49,21 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
-                    >
-                      {link.label}
-                    </a>
+                    {(link as any).isDocsLink ? (
+                      <button
+                        onClick={onDocsClick}
+                        className="text-sm text-gray-400 hover:text-white transition-colors duration-200 text-left"
+                      >
+                        {link.label}
+                      </button>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
