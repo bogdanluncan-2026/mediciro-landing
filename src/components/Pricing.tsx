@@ -94,6 +94,74 @@ function PricingCard({
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const pricingAddon = (content.pricing as any).addon as {
+  name: string; price: string; currency: string; period: string
+  description: string; features: string[]; ctaText: string; ctaHref: string
+}
+
+function AddonCard() {
+  const addon = pricingAddon
+  const { ref, isInView } = useScrollAnimation()
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+      className="mt-10 bg-gradient-to-r from-green-50 to-emerald-50 border border-emerald-200 rounded-3xl p-8"
+    >
+      <div className="flex flex-col md:flex-row md:items-center gap-6">
+        {/* Icon + title */}
+        <div className="flex items-center gap-4 md:w-64 flex-shrink-0">
+          <div className="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center flex-shrink-0">
+            <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-emerald-600 mb-0.5">
+              Add-on opțional
+            </div>
+            <h3 className="text-base font-bold text-ink">{addon.name}</h3>
+          </div>
+        </div>
+
+        {/* Description + features */}
+        <div className="flex-1">
+          <p className="text-sm text-gray-600 mb-3">{addon.description}</p>
+          <div className="flex flex-wrap gap-x-5 gap-y-1">
+            {addon.features.map((f: string) => (
+              <span key={f} className="flex items-center gap-1.5 text-sm text-gray-600">
+                <svg className="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                {f}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Price + CTA */}
+        <div className="flex flex-col items-start md:items-end gap-3 flex-shrink-0">
+          <div className="flex items-baseline gap-1">
+            <span className="text-3xl font-black text-ink">+{addon.price}</span>
+            <span className="text-sm font-medium text-gray-500">{addon.currency}{addon.period}</span>
+          </div>
+          <a
+            href={addon.ctaHref}
+            className="inline-flex items-center justify-center px-5 py-2 rounded-full font-semibold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
+          >
+            {addon.ctaText}
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
 export default function Pricing() {
   const { pricing } = content
   const { ref: headingRef, isInView: headingInView } = useScrollAnimation()
@@ -123,12 +191,14 @@ export default function Pricing() {
           ))}
         </div>
 
+        <AddonCard />
+
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center text-sm text-gray-400 mt-10"
+          className="text-center text-sm text-gray-400 mt-8"
         >
           {pricing.footnote}
         </motion.p>

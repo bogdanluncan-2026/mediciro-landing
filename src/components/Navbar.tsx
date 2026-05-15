@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import content from '../content'
 
-export default function Navbar() {
+export default function Navbar({ onDocsClick }: { onDocsClick?: () => void }) {
   const { navbar } = content
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -56,15 +56,25 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navbar.links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-ink transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navbar.links.map((link) =>
+              (link as any).isDocsLink ? (
+                <button
+                  key={link.label}
+                  onClick={onDocsClick}
+                  className="text-sm font-medium text-gray-600 hover:text-ink transition-colors duration-200"
+                >
+                  {link.label}
+                </button>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium text-gray-600 hover:text-ink transition-colors duration-200"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </nav>
 
           {/* CTA */}
@@ -140,16 +150,26 @@ export default function Navbar() {
             className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
-              {navbar.links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-sm font-medium text-gray-700 hover:text-ink py-1"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navbar.links.map((link) =>
+                (link as any).isDocsLink ? (
+                  <button
+                    key={link.label}
+                    onClick={() => { setMenuOpen(false); onDocsClick?.() }}
+                    className="text-sm font-medium text-gray-700 hover:text-ink py-1 text-left"
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-sm font-medium text-gray-700 hover:text-ink py-1"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
               <div className="pt-2 border-t border-gray-100 mt-2 flex flex-col gap-3">
                 <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
                   {navbar.loginDropdown.label}
