@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import BetaBanner from './components/BetaBanner'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -12,16 +12,39 @@ import Footer from './components/Footer'
 import DocsOverlay from './components/DocsOverlay'
 
 export default function App() {
-  const [docsOpen, setDocsOpen] = useState(false)
+  const [docsOpen, setDocsOpen] = useState(() => window.location.hash === '#documentatie')
+
+  function openDocs() {
+    window.location.hash = 'documentatie'
+    setDocsOpen(true)
+  }
+
+  function closeDocs() {
+    history.pushState('', document.title, window.location.pathname + window.location.search)
+    setDocsOpen(false)
+  }
+
+  // Deschide overlay când utilizatorul navighează la #documentatie (back/forward sau link direct)
+  useEffect(() => {
+    function onHashChange() {
+      if (window.location.hash === '#documentatie') {
+        setDocsOpen(true)
+      } else {
+        setDocsOpen(false)
+      }
+    }
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
 
   return (
     <div className="min-h-screen bg-white">
       {docsOpen ? (
-        <DocsOverlay onClose={() => setDocsOpen(false)} />
+        <DocsOverlay onClose={closeDocs} />
       ) : (
         <>
           <BetaBanner />
-          <Navbar onDocsClick={() => setDocsOpen(true)} />
+          <Navbar onDocsClick={openDocs} />
           <main>
             <Hero />
             <Features />
@@ -31,7 +54,7 @@ export default function App() {
             <Pricing />
             <FinalCTA />
           </main>
-          <Footer onDocsClick={() => setDocsOpen(true)} />
+          <Footer onDocsClick={openDocs} />
         </>
       )}
     </div>
