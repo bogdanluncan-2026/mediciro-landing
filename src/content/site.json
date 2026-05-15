@@ -277,7 +277,7 @@
       {
         "title": "Suport",
         "links": [
-          { "label": "Documentație", "href": "#" },
+          { "label": "Documentație", "href": "#", "isDocsLink": true },
           { "label": "Ghid de start", "href": "#" },
           { "label": "contact@mediciro.ro", "href": "mailto:contact@mediciro.ro" }
         ]
