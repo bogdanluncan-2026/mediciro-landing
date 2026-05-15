@@ -251,28 +251,32 @@
         "icon": "building",
         "color": "blue",
         "description": "Înregistrare, gestionare doctori, programări, setări clinică și abonament.",
-        "file": "/docs/Ghid_Administrator_Clinica.docx"
+        "file": "/docs/Ghid_Administrator_Clinica.pdf",
+        "available": true
       },
       {
         "role": "Recepție / Frontdesk",
         "icon": "users",
         "color": "green",
         "description": "Creare și gestionare programări manuale, confirmare, anulare și lucrul cu pacienții.",
-        "file": "/docs/Ghid_Receptie.docx"
+        "file": "",
+        "available": false
       },
       {
         "role": "Doctor",
         "icon": "stethoscope",
         "color": "purple",
         "description": "Activare cont, setare program de lucru, vizualizare programări și teleconsultații.",
-        "file": "/docs/Ghid_Doctor.docx"
+        "file": "",
+        "available": false
       },
       {
         "role": "Pacient",
         "icon": "heart",
         "color": "orange",
         "description": "Creare cont, cum faci o programare online și cum intri la o teleconsultație.",
-        "file": "/docs/Ghid_Pacient.docx"
+        "file": "",
+        "available": false
       }
     ]
   },
