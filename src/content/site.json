@@ -32,7 +32,7 @@
       "label": "Pentru clinici",
       "title": "Modernizează-ți clinica",
       "description": "Gestionează programări, doctori și pacienți dintr-un singur loc.",
-      "trustLine": "De la 99 RON/lună · 30 zile gratuit · anulezi oricând",
+      "trustLine": "De la 129 RON/lună · 30 zile gratuit · anulezi oricând",
       "primaryCta": {
         "text": "Înregistrează clinica",
         "href": "https://app.mediciro.ro/register"
@@ -167,7 +167,7 @@
       {
         "name": "Basic",
         "pricePrefix": "",
-        "price": "99",
+        "price": "129",
         "currency": "RON",
         "period": "/lună",
         "description": "Perfect pentru o clinică cu 1-3 doctori care abia începe digitalizarea.",
@@ -216,7 +216,6 @@
           "Branding personalizat",
           "Funcționalități la cerere (preț individualizat)",
           "Integrări API custom",
-          "Manager dedicat",
           "Onboarding asistat"
         ],
         "ctaText": "Contactează-ne",
@@ -250,7 +249,7 @@
         "role": "Administrator Clinică",
         "icon": "building",
         "color": "blue",
-        "description": "Înregistrare, gestionare doctori, programări, setări clinică și abonament.",
+        "description": "Înregistrare, gestionare doctori, programări, rapoarte, setări clinică și abonament.",
         "file": "/docs/Ghid_Administrator_Clinica.pdf",
         "available": true
       },
