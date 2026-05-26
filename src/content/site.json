@@ -258,8 +258,8 @@
         "icon": "users",
         "color": "green",
         "description": "Creare și gestionare programări manuale, confirmare, anulare și lucrul cu pacienții.",
-        "file": "",
-        "available": false
+        "file": "/docs/Ghid_Frontdesk.pdf",
+        "available": true
       },
       {
         "role": "Doctor",
