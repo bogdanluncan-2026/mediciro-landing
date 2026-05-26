@@ -124,7 +124,7 @@
         "number": 3,
         "icon": "checkCircle",
         "title": "Pacienții se programează",
-        "description": "Pacienții accesează pagina clinicii, aleg doctorul și intervalul disponibil. Confirmarea vine instant."
+        "description": "Pacienții accesează aplicația, aleg specialitatea, medicul și ora dorită pentru consultație. Confirmarea vine automat."
       }
     ],
     "cta": {
@@ -290,6 +290,121 @@
     "ctaSecondary": {
       "text": "Contactează-ne",
       "href": "mailto:contact@mediciro.ro"
+    }
+  },
+  "cliniciPage": {
+    "hero": {
+      "badge": "Construit cu feedback direct de la clinici private românești",
+      "headline": "Clinica ta, organizată.",
+      "headlineAccent": "Pacienții tăi, mulțumiți.",
+      "subtitle": "MediciRO automatizează programările, notificările și managementul clinicii — astfel încât echipa ta să se concentreze pe pacienți, nu pe telefoane.",
+      "trustSignals": "Fără card de credit · Anulezi oricând · Setup în 30 minute",
+      "primaryCta": { "text": "Încearcă gratuit 30 zile", "href": "https://app.mediciro.ro/register" },
+      "secondaryCta": { "text": "Solicită o demonstrație", "href": "mailto:contact@mediciro.ro" }
+    },
+    "testimonials": [
+      {
+        "quote": "De când am implementat MediciRO, recepția noastră nu mai pierde timp cu telefoanele pentru programări. Totul vine online, organizat automat.",
+        "name": "Dr. Mihai P.",
+        "role": "Administrator, clinică stomatologică",
+        "city": "Oradea",
+        "initials": "MP",
+        "avatarColor": "bg-blue-600"
+      },
+      {
+        "quote": "Setup-ul a durat mai puțin de o oră. Nu am avut nevoie de niciun tehnic. Acum toți doctorii mei au calendarul actualizat în timp real.",
+        "name": "Andreea T.",
+        "role": "Manager clinică",
+        "city": "Cluj-Napoca",
+        "initials": "AT",
+        "avatarColor": "bg-indigo-600"
+      }
+    ],
+    "video": {
+      "label": "Demo",
+      "title": "Vezi platforma în acțiune",
+      "subtitle": "Un tur rapid al funcționalităților principale — de la programare la notificare.",
+      "embedUrl": "",
+      "placeholderText": "Video demo disponibil în curând",
+      "demoLinkText": "Solicită un demo live →",
+      "demoLinkHref": "mailto:contact@mediciro.ro?subject=Demo MediciRO"
+    },
+    "features": {
+      "label": "Funcționalități",
+      "title": "Tot ce ai nevoie, dintr-un singur loc",
+      "subtitle": "Construit specific pentru clinici private din România, nu adaptat dintr-un tool generic.",
+      "items": [
+        {
+          "icon": "calendar",
+          "title": "Programări Online 24/7",
+          "description": "Pacienții se programează direct din browser sau aplicație, fără telefoane la recepție. Calendarul se actualizează în timp real.",
+          "color": "blue"
+        },
+        {
+          "icon": "bell",
+          "title": "Notificări Automate SMS & Email",
+          "description": "Confirmare, reminder cu 24h înainte și notificare anulare — complet automat. Reduci no-show-urile fără niciun efort suplimentar.",
+          "color": "sky"
+        },
+        {
+          "icon": "users",
+          "title": "Management Complet",
+          "description": "Doctori, specialități, săli, orar de lucru — totul dintr-un singur tablou de bord. Recepția gestionează manual programările când e nevoie.",
+          "color": "indigo"
+        },
+        {
+          "icon": "chart",
+          "title": "Rapoarte & Statistici",
+          "description": "Câți pacienți noi, ce servicii sunt cele mai solicitate, ocuparea pe doctori — date clare pentru decizii mai bune.",
+          "color": "violet"
+        }
+      ],
+      "whatsappAddon": {
+        "title": "Add-on WhatsApp — 99 RON/lună",
+        "description": "Trimite notificări automate pacienților prin WhatsApp: confirmare programare, reminder cu 24h înainte, notificare anulare.",
+        "ctaText": "Adaugă la plan",
+        "ctaHref": "mailto:contact@mediciro.ro?subject=WhatsApp addon"
+      }
+    },
+    "faq": {
+      "label": "Întrebări frecvente",
+      "title": "Ai întrebări? Avem răspunsuri.",
+      "contactText": "Ai alte întrebări? Scrie-ne direct.",
+      "contactHref": "mailto:contact@mediciro.ro",
+      "contactLabel": "contact@mediciro.ro",
+      "items": [
+        {
+          "q": "Avem deja un sistem de programări. De ce să schimbăm?",
+          "a": "Dacă sistemul actual funcționează prin telefon sau Excel, echipa ta pierde ore zilnic cu programări manuale. MediciRO automatizează tot procesul: pacienții se programează singuri, confirmările și reminderele merg automat, iar tu ai vizibilitate completă în timp real — fără extra-efort. Migrarea durează sub o zi."
+        },
+        {
+          "q": "Cât durează implementarea? Avem nevoie de un IT-ist?",
+          "a": "Nu ai nevoie de IT. Înregistrezi clinica, adaugi doctorii și setezi programul de lucru — totul din browser, în mai puțin de 30 de minute. Oferim și onboarding asistat dacă preferi să mergi mai repede."
+        },
+        {
+          "q": "Datele pacienților noștri sunt în siguranță? Respectă GDPR?",
+          "a": "Da. MediciRO rulează pe servere AWS Frankfurt (UE), conform Art. 44 GDPR. Datele medicale sunt criptate, accesul este controlat pe roluri, iar toate acțiunile sunt logate pentru audit. Oferim DPA (Data Processing Agreement)."
+        },
+        {
+          "q": "Ce se întâmplă dacă vrem să renunțăm?",
+          "a": "Poți anula oricând, fără penalități. În primele 30 de zile e complet gratuit — dacă nu ești mulțumit, nu plătești nimic. La anulare îți exportăm toate datele în format standard."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "30 zile gratuite · Fără card · Anulezi oricând",
+      "title": "Pregătit să modernizezi clinica ta?",
+      "subtitle": "Înregistrează-ți clinica acum și începe să oferi programări online pacienților tăi în mai puțin de o oră.",
+      "primaryCta": { "text": "Înregistrează clinica", "href": "https://app.mediciro.ro/register" },
+      "secondaryCta": { "text": "Contactează-ne", "href": "mailto:contact@mediciro.ro" }
+    },
+    "footer": {
+      "links": [
+        { "label": "Homepage", "href": "https://mediciro.ro" },
+        { "label": "Prețuri", "href": "https://mediciro.ro#pricing" },
+        { "label": "Contact", "href": "mailto:contact@mediciro.ro" },
+        { "label": "Autentificare", "href": "https://app.mediciro.ro/login" }
+      ]
     }
   },
   "footer": {
