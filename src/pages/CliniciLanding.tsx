@@ -107,9 +107,9 @@ export default function CliniciLanding() {
             {hero.badge}
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-            {hero.headline}{' '}
-            <span className="text-blue-600">{hero.headlineAccent}</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6">
+            <span className="block leading-tight">{hero.headline}</span>
+            <span className="block leading-tight mt-2 text-blue-600">{hero.headlineAccent}</span>
           </h1>
 
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
