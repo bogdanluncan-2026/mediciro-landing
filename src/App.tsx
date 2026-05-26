@@ -10,6 +10,7 @@ import Pricing from './components/Pricing'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 import DocsOverlay from './components/DocsOverlay'
+import WhatsAppButton from './components/WhatsAppButton'
 
 export default function App() {
   const [docsOpen, setDocsOpen] = useState(() => window.location.hash === '#documentatie')
@@ -55,6 +56,7 @@ export default function App() {
             <FinalCTA />
           </main>
           <Footer onDocsClick={openDocs} />
+          <WhatsAppButton />
         </>
       )}
     </div>

@@ -23,7 +23,7 @@
   },
   "hero": {
     "backgroundImage": "/hero-bg.png",
-    "badge": "Platforma #1 pentru clinici private din România",
+    "badge": "Construită cu feedback direct de la clinici private românești",
     "headline": "Programări medicale,",
     "headlineAccent": "simplu pentru toată lumea",
     "subtitle": "Pentru clinici care vor să fie moderne și pentru pacienții care vor să se programeze rapid, fără telefoane.",
@@ -92,13 +92,13 @@
       {
         "icon": "mobile",
         "title": "Aplicație Mobilă",
-        "description": "iOS și Android disponibile pentru doctori și pacienți. Accesul la programări oriunde, oricând, fără laptop.",
+        "description": "Aplicație mobilă pentru medici și pacienți. Accesul la programări oriunde, oricând, direct de pe telefon.",
         "color": "violet"
       },
       {
         "icon": "bell",
         "title": "Notificări Automate",
-        "description": "SMS și email automat pentru confirmări, reminder-uri și anulări. Reduci no-show-urile cu până la 60%.",
+        "description": "SMS și email automat pentru confirmări, reminder-uri și anulări. Reduci no-show-urile cu până la 60% — conform studiilor din industrie.",
         "color": "sky"
       }
     ]
@@ -282,7 +282,7 @@
   "finalCta": {
     "badge": "30 zile gratuite · Anulezi oricând",
     "title": "Pregătit să modernizezi clinica ta?",
-    "subtitle": "Alătură-te sutelor de clinici din România care folosesc MediciRO pentru a gestiona mai eficient programările și pacienții.",
+    "subtitle": "Alătură-te clinicilor din România care aleg MediciRO pentru a gestiona mai eficient programările și pacienții.",
     "ctaPrimary": {
       "text": "Înregistrează clinica",
       "href": "https://app.mediciro.ro/register"
