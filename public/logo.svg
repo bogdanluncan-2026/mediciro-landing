@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MediciRO — Horizontal lockup (icon + wordmark), for LIGHT backgrounds.
+     Use for: website header, email signatures, business cards (light).
+     Wordmark: "Medici" in slate-800, "RO" in emerald-600 (Romania accent). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200">
+  <!-- Icon, scaled to ~160px and left-aligned -->
+  <g transform="translate(20, 20)">
+    <rect width="160" height="160" rx="36" ry="36" fill="#059669"/>
+    <path d="M80 124
+             C 47.5 101.25, 27.5 83.75, 27.5 62.5
+             C 27.5 47.5, 40 36.25, 55 36.25
+             C 65 36.25, 73.75 41.25, 80 50
+             C 86.25 41.25, 95 36.25, 105 36.25
+             C 120 36.25, 132.5 47.5, 132.5 62.5
+             C 132.5 83.75, 112.5 101.25, 80 124 Z"
+          fill="#ffffff"/>
+    <polyline points="40,73.75 57.5,73.75 63.75,61.25 71.25,86.25 80,67.5 88.75,80 96.25,73.75 120,73.75"
+              fill="none"
+              stroke="#059669"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="210" y="125"
+        font-family="'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="90"
+        font-weight="700"
+        letter-spacing="-2"
+        fill="#1f2937">Medici<tspan fill="#059669">RO</tspan></text>
+
+  <!-- Tagline (optional, kept subtle) -->
+  <text x="214" y="160"
+        font-family="'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="20"
+        font-weight="400"
+        letter-spacing="3"
+        fill="#6b7280">PROGRAMĂRI · TELECONSULT</text>
+</svg>

@@ -37,21 +37,8 @@ export default function Navbar({ onDocsClick }: { onDocsClick?: () => void }) {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5">
-                <path
-                  d="M3 12h3l2.5-5 4 10 2.5-5H21"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <span className="text-xl font-bold text-ink tracking-tight">
-              Medici<span className="text-accent">RO</span>
-            </span>
+          <a href="#" className="flex items-center group">
+            <img src="/logo.svg" alt="MediciRO" className="h-10 w-auto" />
           </a>
 
           {/* Desktop Nav */}

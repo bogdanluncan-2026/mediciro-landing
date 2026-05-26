@@ -14,21 +14,8 @@ export default function Footer({ onDocsClick }: { onDocsClick?: () => void }) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           {/* Brand */}
           <div className="md:col-span-1">
-            <a href="#" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5">
-                  <path
-                    d="M3 12h3l2.5-5 4 10 2.5-5H21"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <span className="text-xl font-bold tracking-tight">
-                Medici<span className="text-accent">RO</span>
-              </span>
+            <a href="#" className="flex items-center mb-4">
+              <img src="/logo.svg" alt="MediciRO" className="h-9 w-auto brightness-0 invert" />
             </a>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">{footer.description}</p>
             <p className="text-sm text-gray-500 mt-4">

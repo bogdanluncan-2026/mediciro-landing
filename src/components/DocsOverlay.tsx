@@ -51,15 +51,7 @@ export default function DocsOverlay({ onClose }: { onClose: () => void }) {
       <div className="sticky top-0 bg-white border-b border-gray-100 z-10">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5">
-                <path d="M3 12h3l2.5-5 4 10 2.5-5H21" stroke="white" strokeWidth="2"
-                  strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            <span className="text-xl font-bold text-ink tracking-tight">
-              Medici<span className="text-accent">RO</span>
-            </span>
+            <img src="/logo.svg" alt="MediciRO" className="h-8 w-auto" />
             <span className="text-gray-300 mx-1">·</span>
             <span className="text-sm font-medium text-gray-500">Documentație</span>
           </div>

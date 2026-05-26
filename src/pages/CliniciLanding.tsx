@@ -83,8 +83,8 @@ export default function CliniciLanding() {
       {/* ── Minimal Navbar ─────────────────────────────────────────────── */}
       <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <a href={siteData.meta.companyUrl} className="text-xl font-bold text-blue-600">
-            {siteData.meta.siteName}
+          <a href={siteData.meta.companyUrl}>
+            <img src="/logo.svg" alt={siteData.meta.siteName} className="h-9 w-auto" />
           </a>
           <div className="flex items-center gap-3">
             <a href={`${siteData.meta.appUrl}/login`} className="hidden sm:inline text-sm text-gray-500 hover:text-gray-700 transition-colors">
@@ -425,7 +425,7 @@ export default function CliniciLanding() {
       {/* ── Minimal Footer ─────────────────────────────────────────────── */}
       <footer className="bg-gray-900 text-gray-400 py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-white font-bold text-lg">{siteData.meta.siteName}</span>
+          <img src="/logo.svg" alt={siteData.meta.siteName} className="h-8 w-auto brightness-0 invert" />
           <div className="flex flex-wrap gap-6 text-sm justify-center">
             {footer.links.map((link, i) => (
               <a key={i} href={link.href} className="hover:text-white transition-colors">
