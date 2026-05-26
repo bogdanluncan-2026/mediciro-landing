@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import BetaBanner from './components/BetaBanner'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -11,8 +12,9 @@ import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 import DocsOverlay from './components/DocsOverlay'
 import WhatsAppButton from './components/WhatsAppButton'
+import CliniciLanding from './pages/CliniciLanding'
 
-export default function App() {
+function HomePage() {
   const [docsOpen, setDocsOpen] = useState(() => window.location.hash === '#documentatie')
 
   function openDocs() {
@@ -25,7 +27,6 @@ export default function App() {
     setDocsOpen(false)
   }
 
-  // Deschide overlay când utilizatorul navighează la #documentatie (back/forward sau link direct)
   useEffect(() => {
     function onHashChange() {
       if (window.location.hash === '#documentatie') {
@@ -60,5 +61,14 @@ export default function App() {
         </>
       )}
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/clinici" element={<CliniciLanding />} />
+      <Route path="*" element={<HomePage />} />
+    </Routes>
   )
 }
