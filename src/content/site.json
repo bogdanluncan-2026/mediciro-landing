@@ -266,18 +266,19 @@
         "icon": "stethoscope",
         "color": "purple",
         "description": "Activare cont, setare program de lucru, vizualizare programări și teleconsultații.",
-        "file": "",
-        "available": false
+        "file": "/docs/Ghid_Medici.pdf",
+        "available": true
       },
       {
         "role": "Pacient",
         "icon": "heart",
         "color": "orange",
         "description": "Creare cont, cum faci o programare online și cum intri la o teleconsultație.",
-        "file": "",
-        "available": false
+        "file": "/docs/Ghid_Pacienti.pdf",
+        "available": true
       }
-    ]
+    ],
+    "note": "Ghidurile de utilizare pot suferi modificări pe măsură ce platforma MediciRO se dezvoltă. Dacă observați neconcordanțe între aplicația reală și conținutul ghidului, vă rugăm să ne contactați la contact@mediciro.ro."
   },
   "finalCta": {
     "badge": "30 zile gratuite · Anulezi oricând",

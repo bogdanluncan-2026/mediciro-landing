@@ -40,6 +40,7 @@ const docs = (content as any).docs as {
   label: string
   title: string
   subtitle: string
+  note: string
   guides: Array<{ role: string; icon: string; color: string; description: string; file: string; available: boolean }>
 }
 
@@ -132,12 +133,16 @@ export default function DocsOverlay({ onClose }: { onClose: () => void }) {
           })}
         </div>
 
-        <p className="text-center text-sm text-gray-400 mt-12">
-          Ai întrebări? Scrie-ne la{' '}
-          <a href="mailto:contact@mediciro.ro" className="text-primary hover:underline">
+        <div className="mt-12 bg-amber-50 border border-amber-200 rounded-xl px-6 py-4 text-sm text-amber-800 leading-relaxed text-center max-w-2xl mx-auto">
+          <svg className="w-4 h-4 inline-block mr-1.5 mb-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {docs.note.replace('contact@mediciro.ro', '').trimEnd().replace(/\.$/, '')}.{' '}
+          <a href="mailto:contact@mediciro.ro" className="font-semibold underline hover:text-amber-900 transition-colors">
             contact@mediciro.ro
           </a>
-        </p>
+          .
+        </div>
       </div>
     </div>
   )
