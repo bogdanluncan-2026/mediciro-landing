@@ -304,20 +304,20 @@
     },
     "testimonials": [
       {
-        "quote": "De când am implementat MediciRO, recepția noastră nu mai pierde timp cu telefoanele pentru programări. Totul vine online, organizat automat.",
-        "name": "Dr. Mihai P.",
-        "role": "Administrator, clinică stomatologică",
+        "quote": "De când am implementat MediciRO, recepția noastră nu mai pierde timp cu telefoanele pentru programări. Totul vine online, organizat automat. Numarul pacientilor a crescut semnificativ.",
+        "name": "Delia Constantin",
+        "role": "Administrator, clinica Viva-Med",
         "city": "Oradea",
-        "initials": "MP",
+        "initials": "DC",
         "avatarColor": "bg-blue-600"
       },
       {
-        "quote": "Setup-ul a durat mai puțin de o oră. Nu am avut nevoie de niciun tehnic. Acum toți doctorii mei au calendarul actualizat în timp real.",
+        "quote": "Setup-ul a durat mai puțin de o oră. Nu am avut nevoie de niciun suport tehnic. Acum toți doctorii mei au calendarul actualizat în timp real.",
         "name": "Andreea T.",
         "role": "Manager clinică",
-        "city": "Cluj-Napoca",
+        "city": "Oradea",
         "initials": "AT",
-        "avatarColor": "bg-indigo-600"
+        "avatarColor": "bg-blue-600"
       }
     ],
     "video": {
