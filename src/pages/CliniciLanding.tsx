@@ -38,7 +38,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Management Complet',
-    desc: 'Doctori, specialități, săli, orar de lucru — totul dintr-un singur tablou de bord. Recepția gestionează manual programările când e nevoie.',
+    desc: 'Doctori, specialități, orar de lucru — totul dintr-un singur tablou de bord. Recepția gestionează manual programările când e nevoie.',
     color: 'indigo',
   },
   {
@@ -70,7 +70,7 @@ const TESTIMONIALS = [
     color: 'bg-blue-600',
   },
   {
-    quote: 'Setup-ul a durat mai puțin de o oră. Nu am avut nevoie de niciun tehnic. Acum toți doctorii mei au calendarul actualizat în timp real.',
+    quote: 'Setup-ul a durat mai puțin de o oră. Nu am avut nevoie de niciun suport tehnic. Acum toți doctorii mei au calendarul actualizat în timp real.',
     name: 'Andreea T.',
     role: 'Manager clinică',
     city: 'Cluj-Napoca',
@@ -82,7 +82,7 @@ const TESTIMONIALS = [
 const FAQ: FaqItem[] = [
   {
     q: 'Avem deja un sistem de programări. De ce să schimbăm?',
-    a: 'Dacă sistemul actual funcționează prin telefon sau Excel, echipa ta pierde ore zilnic cu programări manuale. MediciRO automatizează tot procesul: pacienții se programează singuri, confirmatile și reminderele merg automat, iar tu ai vizibilitate completă în timp real — fără extra-efort. Migrarea durează sub o zi.',
+    a: 'Dacă sistemul actual funcționează prin telefon sau Excel, echipa ta pierde ore zilnic cu programări manuale. MediciRO automatizează tot procesul: pacienții se programează singuri, confirmările și reminderele merg automat, iar tu ai vizibilitate completă în timp real — fără extra-efort. Migrarea durează sub o zi.',
   },
   {
     q: 'Cât durează implementarea? Avem nevoie de un IT-ist?',
@@ -90,7 +90,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: 'Datele pacienților noștri sunt în siguranță? Respectă GDPR?',
-    a: 'Da. MediciRO rulează pe servere AWS Frankfurt (UE), conform Art. 44 GDPR. Datele medicale sunt criptate, accesul este controlat pe roluri, iar toate acțiunile sunt logate pentru audit. Ai la dispoziție DPA (Data Processing Agreement) la cerere.',
+    a: 'Da. MediciRO rulează pe servere AWS Frankfurt (UE), conform Art. 44 GDPR. Datele medicale sunt criptate, accesul este controlat pe roluri, iar toate acțiunile sunt logate pentru audit. Oferim DPA (Data Processing Agreement).',
   },
   {
     q: 'Ce se întâmplă dacă vrem să renunțăm?',
@@ -120,7 +120,7 @@ const PLANS = [
   },
   {
     name: 'Enterprise',
-    price: '1.499',
+    price: 'de la 1.499',
     period: '/lună',
     desc: 'Rețele de clinici',
     features: ['Doctori nelimitați', 'Branding personalizat', 'Funcționalități la cerere', 'Integrări API custom', 'Onboarding asistat'],
@@ -210,7 +210,7 @@ export default function CliniciLanding() {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-            MediciRO automatizează programările, notificările și managementul clinicii —
+            MediciRO automatizează programările, notificările și managementul consultațiilor —
             astfel încât echipa ta să se concentreze pe pacienți, nu pe telefoane.
           </p>
 

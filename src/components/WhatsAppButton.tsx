@@ -1,5 +1,5 @@
 export default function WhatsAppButton() {
-  const phone = '40000000000' // placeholder — înlocuiește cu numărul real
+  const phone = '40745779632'
   const message = encodeURIComponent('Bună ziua! Sunt interesat de platforma MediciRO pentru clinica mea.')
   const href = `https://wa.me/${phone}?text=${message}`
 
