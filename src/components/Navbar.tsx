@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import content from '../content'
+import { trackCta } from '../utils/analytics'
 
 export default function Navbar({ onDocsClick }: { onDocsClick?: () => void }) {
   const { navbar } = content
@@ -97,6 +98,7 @@ export default function Navbar({ onDocsClick }: { onDocsClick?: () => void }) {
                       <a
                         key={item.href}
                         href={item.href}
+                        onClick={() => trackCta(`Autentificare - ${item.label}`, 'navbar_login', item.href)}
                         className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-ink transition-colors"
                       >
                         {item.label}
@@ -165,7 +167,7 @@ export default function Navbar({ onDocsClick }: { onDocsClick?: () => void }) {
                   <a
                     key={item.href}
                     href={item.href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => { setMenuOpen(false); trackCta(`Autentificare - ${item.label}`, 'navbar_login', item.href) }}
                     className="text-sm font-medium text-gray-700 hover:text-ink"
                   >
                     {item.label}

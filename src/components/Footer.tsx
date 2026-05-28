@@ -1,4 +1,5 @@
 import content from '../content'
+import { trackCta } from '../utils/analytics'
 
 export default function Footer({ onDocsClick }: { onDocsClick?: () => void }) {
   const { footer, meta } = content
@@ -46,6 +47,7 @@ export default function Footer({ onDocsClick }: { onDocsClick?: () => void }) {
                     ) : (
                       <a
                         href={link.href}
+                        onClick={() => trackCta(link.label, 'footer', link.href)}
                         className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                       >
                         {link.label}
