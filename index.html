@@ -14,6 +14,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <title>MediciRO — Programări Medicale Online pentru Clinici Private</title>
+
+    <!--
+      GTM Consent Mode v2 — MED-83
+      Must run BEFORE the GTM snippet (added in MED-82) so that tags fire
+      only after user consents. Defaults all storage to 'denied'.
+      If the user already accepted in a previous session, we restore consent
+      immediately so GTM fires correctly on subsequent page loads.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+
+      // Step 1: deny everything by default
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+
+      // Step 2: restore previous session consent (runs before React & GTM load)
+      try {
+        var storedConsent = localStorage.getItem('mediciro_cookie_consent');
+        if (storedConsent === 'accepted') {
+          gtag('consent', 'update', {
+            analytics_storage: 'granted',
+            ad_storage: 'granted',
+            ad_user_data: 'granted',
+            ad_personalization: 'granted'
+          });
+        }
+      } catch (e) { /* localStorage blocked (incognito strict mode) */ }
+    </script>
   </head>
   <body>
     <div id="root"></div>
