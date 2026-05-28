@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import siteData from '../content/site.json'
 import WhatsAppButton from '../components/WhatsAppButton'
+import { trackCta } from '../utils/analytics'
 
 const { cliniciPage, pricing, howItWorks } = siteData
 
@@ -90,7 +91,11 @@ export default function CliniciLanding() {
             <a href={`${siteData.meta.appUrl}/login`} className="hidden sm:inline text-sm text-gray-500 hover:text-gray-700 transition-colors">
               Autentificare
             </a>
-            <a href={hero.primaryCta.href} className="inline-flex items-center gap-1.5 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            <a
+              href={hero.primaryCta.href}
+              onClick={() => trackCta('Încearcă gratuit', 'clinici_navbar', hero.primaryCta.href)}
+              className="inline-flex items-center gap-1.5 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
               Încearcă gratuit
             </a>
           </div>
@@ -143,6 +148,7 @@ export default function CliniciLanding() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
             <a
               href={hero.primaryCta.href}
+              onClick={() => trackCta(hero.primaryCta.text, 'clinici_hero', hero.primaryCta.href)}
               className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200"
             >
               {hero.primaryCta.text}
@@ -152,6 +158,7 @@ export default function CliniciLanding() {
             </a>
             <a
               href={hero.secondaryCta.href}
+              onClick={() => trackCta(hero.secondaryCta.text, 'clinici_hero', hero.secondaryCta.href)}
               className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 font-semibold text-lg px-8 py-4 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
             >
               {hero.secondaryCta.text}
@@ -264,6 +271,7 @@ export default function CliniciLanding() {
             </div>
             <a
               href={features.whatsappAddon.ctaHref}
+              onClick={() => trackCta(features.whatsappAddon.ctaText, 'clinici_features', features.whatsappAddon.ctaHref)}
               className="inline-flex items-center gap-1.5 bg-green-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-green-700 transition-colors flex-shrink-0"
             >
               {features.whatsappAddon.ctaText}
@@ -298,6 +306,7 @@ export default function CliniciLanding() {
           <div className="text-center mt-10">
             <a
               href={howItWorks.cta.href}
+              onClick={() => trackCta(howItWorks.cta.text, 'clinici_how_it_works', howItWorks.cta.href)}
               className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200"
             >
               {howItWorks.cta.text} →
@@ -357,6 +366,7 @@ export default function CliniciLanding() {
                 </ul>
                 <a
                   href={plan.ctaHref}
+                  onClick={() => trackCta(plan.ctaText, 'clinici_pricing', plan.ctaHref)}
                   className={`block text-center font-bold py-3 px-4 rounded-xl transition-colors ${
                     plan.highlighted
                       ? 'bg-white text-blue-600 hover:bg-blue-50'
@@ -405,6 +415,7 @@ export default function CliniciLanding() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={finalCta.primaryCta.href}
+              onClick={() => trackCta(finalCta.primaryCta.text, 'clinici_final_cta', finalCta.primaryCta.href)}
               className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 font-bold text-lg px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
             >
               {finalCta.primaryCta.text}
@@ -414,6 +425,7 @@ export default function CliniciLanding() {
             </a>
             <a
               href={finalCta.secondaryCta.href}
+              onClick={() => trackCta(finalCta.secondaryCta.text, 'clinici_final_cta', finalCta.secondaryCta.href)}
               className="inline-flex items-center justify-center gap-2 bg-white/10 text-white font-semibold text-lg px-8 py-4 rounded-xl border border-white/30 hover:bg-white/20 transition-colors"
             >
               {finalCta.secondaryCta.text}
