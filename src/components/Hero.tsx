@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import content from '../content'
+import { trackCta } from '../utils/analytics'
 
 const container = {
   hidden: { opacity: 0 },
@@ -129,6 +130,7 @@ export default function Hero() {
             <div className="mt-6 flex flex-col gap-2">
               <a
                 href={hero.clinicCard.primaryCta.href}
+                onClick={() => trackCta(hero.clinicCard.primaryCta.text, 'hero_clinic', hero.clinicCard.primaryCta.href)}
                 className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full bg-primary text-white font-semibold text-sm hover:bg-accent transition-all duration-200 shadow-md shadow-primary/20"
               >
                 {hero.clinicCard.primaryCta.text}
@@ -136,6 +138,7 @@ export default function Hero() {
               </a>
               <a
                 href={hero.clinicCard.secondaryCta.href}
+                onClick={() => trackCta(hero.clinicCard.secondaryCta.text, 'hero_clinic', hero.clinicCard.secondaryCta.href)}
                 className="text-center text-sm text-gray-500 hover:text-ink transition-colors py-2"
               >
                 Ai cont? <span className="font-semibold underline-offset-4 hover:underline">{hero.clinicCard.secondaryCta.text}</span>
@@ -168,6 +171,7 @@ export default function Hero() {
             <div className="mt-6 flex flex-col gap-2">
               <a
                 href={hero.patientCard.primaryCta.href}
+                onClick={() => trackCta(hero.patientCard.primaryCta.text, 'hero_patient', hero.patientCard.primaryCta.href)}
                 className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full bg-emerald-500 text-white font-semibold text-sm hover:bg-emerald-600 transition-all duration-200 shadow-md shadow-emerald-500/25"
               >
                 {hero.patientCard.primaryCta.text}
@@ -175,6 +179,7 @@ export default function Hero() {
               </a>
               <a
                 href={hero.patientCard.secondaryCta.href}
+                onClick={() => trackCta(hero.patientCard.secondaryCta.text, 'hero_patient', hero.patientCard.secondaryCta.href)}
                 className="text-center text-sm text-gray-500 hover:text-ink transition-colors py-2"
               >
                 Ai cont? <span className="font-semibold underline-offset-4 hover:underline">{hero.patientCard.secondaryCta.text}</span>

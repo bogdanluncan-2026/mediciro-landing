@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import content from '../content'
+import { trackCta } from '../utils/analytics'
 
 export default function FinalCTA() {
   const { finalCta } = content
@@ -37,6 +38,7 @@ export default function FinalCTA() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={finalCta.ctaPrimary.href}
+                onClick={() => trackCta(finalCta.ctaPrimary.text, 'final_cta', finalCta.ctaPrimary.href)}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-primary font-bold text-base hover:bg-blue-50 transition-all duration-200 shadow-xl shadow-black/10 hover:scale-[1.02] active:scale-[0.98]"
               >
                 {finalCta.ctaPrimary.text}
@@ -46,6 +48,7 @@ export default function FinalCTA() {
               </a>
               <a
                 href={finalCta.ctaSecondary.href}
+                onClick={() => trackCta(finalCta.ctaSecondary.text, 'final_cta', finalCta.ctaSecondary.href)}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 border-white/30 text-white font-semibold text-base hover:border-white/50 hover:bg-white/10 transition-all duration-200"
               >
                 {finalCta.ctaSecondary.text}

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import content from '../content'
+import { trackCta } from '../utils/analytics'
 
 function PricingCard({
   plan,
@@ -82,6 +83,7 @@ function PricingCard({
 
       <a
         href={plan.ctaHref}
+        onClick={() => trackCta(plan.ctaText, 'pricing', plan.ctaHref)}
         className={`inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 ${
           plan.highlighted
             ? 'bg-white text-primary hover:bg-blue-50'
@@ -152,6 +154,7 @@ function AddonCard() {
           </div>
           <a
             href={addon.ctaHref}
+            onClick={() => trackCta(addon.ctaText, 'pricing_addon', addon.ctaHref)}
             className="inline-flex items-center justify-center px-5 py-2 rounded-full font-semibold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
           >
             {addon.ctaText}

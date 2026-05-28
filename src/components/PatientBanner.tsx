@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import content from '../content'
+import { trackCta } from '../utils/analytics'
 
 const iconMap: Record<string, JSX.Element> = {
   free: (
@@ -74,6 +75,7 @@ export default function PatientBanner() {
 
             <a
               href={patientBanner.cta.href}
+              onClick={() => trackCta(patientBanner.cta.text, 'patient_banner', patientBanner.cta.href)}
               className="mt-10 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 text-white font-semibold text-base hover:bg-emerald-600 transition-all duration-200 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/40 hover:scale-[1.02] active:scale-[0.98]"
             >
               {patientBanner.cta.text}
