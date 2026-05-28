@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import DocsOverlay from './components/DocsOverlay'
 import WhatsAppButton from './components/WhatsAppButton'
 import CliniciLanding from './pages/CliniciLanding'
+import CookieConsentBanner from './components/CookieConsentBanner'
 
 function HomePage() {
   const [docsOpen, setDocsOpen] = useState(() => window.location.hash === '#documentatie')
@@ -66,9 +67,13 @@ function HomePage() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/clinici" element={<CliniciLanding />} />
-      <Route path="*" element={<HomePage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/clinici" element={<CliniciLanding />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
+      {/* Cookie consent banner — rendered once, outside routes, so it persists on all pages */}
+      <CookieConsentBanner />
+    </>
   )
 }
