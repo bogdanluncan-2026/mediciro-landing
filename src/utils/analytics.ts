@@ -23,6 +23,11 @@ export type CtaLocation =
   | 'clinici_features'
   | 'clinici_pricing'
   | 'clinici_final_cta'
+  // Navbar & overlays
+  | 'navbar_login'
+  | 'docs_overlay'
+  // Footer
+  | 'footer'
 
 /**
  * Track a CTA button/link click.

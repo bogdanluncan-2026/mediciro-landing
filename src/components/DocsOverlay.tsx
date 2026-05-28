@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import content from '../content'
+import { trackCta } from '../utils/analytics'
 
 const iconMap: Record<string, JSX.Element> = {
   building: (
@@ -103,6 +104,7 @@ export default function DocsOverlay({ onClose }: { onClose: () => void }) {
                   <a
                     href={guide.file}
                     download
+                    onClick={() => trackCta(`Descarcă ghidul - ${guide.role}`, 'docs_overlay', guide.file)}
                     className={`inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-colors ${colors.btn}`}
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
