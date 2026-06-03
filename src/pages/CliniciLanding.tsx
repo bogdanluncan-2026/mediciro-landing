@@ -445,8 +445,11 @@ export default function CliniciLanding() {
               </a>
             ))}
           </div>
-          <p className="text-xs text-gray-500">© {new Date().getFullYear()} {siteData.meta.companyName} SRL</p>
+          <p className="text-xs text-gray-500">© {new Date().getFullYear()} CODELIUM S.R.L.</p>
         </div>
+        <p className="max-w-6xl mx-auto text-xs text-gray-500 text-center sm:text-left mt-4">
+          {siteData.meta.companyLegalName} · CUI {siteData.meta.cui} · {siteData.meta.regCom} · {siteData.meta.companyAddress}
+        </p>
       </footer>
 
       <WhatsAppButton />
