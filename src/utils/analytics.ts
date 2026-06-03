@@ -13,6 +13,7 @@ export type CtaLocation =
   | 'hero_clinic'
   | 'hero_patient'
   | 'patient_banner'
+  | 'teleconsult'
   | 'pricing'
   | 'pricing_addon'
   | 'final_cta'

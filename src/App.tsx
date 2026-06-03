@@ -4,6 +4,7 @@ import BetaBanner from './components/BetaBanner'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import Teleconsult from './components/Teleconsult'
 import HowItWorks from './components/HowItWorks'
 import Screenshots from './components/Screenshots'
 import PatientBanner from './components/PatientBanner'
@@ -51,6 +52,7 @@ function HomePage() {
           <main>
             <Hero />
             <Features />
+            <Teleconsult />
             <HowItWorks />
             <Screenshots />
             <PatientBanner />

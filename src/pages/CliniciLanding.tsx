@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import siteData from '../content/site.json'
 import WhatsAppButton from '../components/WhatsAppButton'
+import TeleconsultDemo from '../components/TeleconsultDemo'
 import { trackCta } from '../utils/analytics'
 
 const { cliniciPage, pricing, howItWorks } = siteData
 
 /* ─── Icon map (prezentare, nu conținut) ─────────────────────────────────── */
 
-type IconName = 'calendar' | 'bell' | 'users' | 'chart' | 'building'
+type IconName = 'calendar' | 'bell' | 'users' | 'chart' | 'building' | 'video'
 
 const ICONS: Record<IconName, JSX.Element> = {
   calendar: (
@@ -35,6 +36,11 @@ const ICONS: Record<IconName, JSX.Element> = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
     </svg>
   ),
+  video: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+    </svg>
+  ),
 }
 
 const FEATURE_COLORS: Record<string, string> = {
@@ -42,6 +48,7 @@ const FEATURE_COLORS: Record<string, string> = {
   sky:    'bg-sky-50 text-sky-600',
   indigo: 'bg-indigo-50 text-indigo-600',
   violet: 'bg-violet-50 text-violet-600',
+  emerald: 'bg-emerald-50 text-emerald-600',
 }
 
 /* ─── FAQ Accordion ──────────────────────────────────────────────────────── */
@@ -277,6 +284,21 @@ export default function CliniciLanding() {
               {features.whatsappAddon.ctaText}
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ── Teleconsultații ────────────────────────────────────────────── */}
+      <section id="teleconsult" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+              {siteData.teleconsult.label}
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">{siteData.teleconsult.title}</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">{siteData.teleconsult.subtitle}</p>
+          </div>
+          <TeleconsultDemo />
+          <p className="text-center text-sm text-gray-400 mt-8">{siteData.teleconsult.note}</p>
         </div>
       </section>
 

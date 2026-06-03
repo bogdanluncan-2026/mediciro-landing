@@ -19,8 +19,22 @@ function MockScreen({
       transition={{ duration: 0.7, delay: index * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
       className="flex flex-col"
     >
-      {/* Screenshot */}
-      <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-2xl shadow-gray-200/60">
+      {/* Screenshot in a browser frame */}
+      <div className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-2xl shadow-gray-300/50 ring-1 ring-black/[0.03]">
+        {/* Browser chrome */}
+        <div className="flex items-center gap-2 px-3 py-2.5 bg-gray-100 border-b border-gray-200">
+          <span className="flex gap-1.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
+          </span>
+          <span className="ml-2 flex-1 inline-flex items-center gap-1.5 truncate rounded-md bg-white border border-gray-200 px-2.5 py-1 text-[11px] text-gray-400">
+            <svg className="w-3 h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            <span className="truncate">{content.screenshots.appUrl}{screen.url}</span>
+          </span>
+        </div>
         <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
           <img
             src={screen.image}
@@ -32,7 +46,7 @@ function MockScreen({
       </div>
 
       {/* Caption */}
-      <div className="mt-4 px-1">
+      <div className="mt-5 px-1">
         <h4 className="font-semibold text-ink">{screen.caption}</h4>
         <p className="text-sm text-gray-500 mt-1">{screen.description}</p>
       </div>

@@ -13,6 +13,7 @@
   "navbar": {
     "links": [
       { "label": "Funcționalități", "href": "#features" },
+      { "label": "Teleconsultații", "href": "#teleconsult" },
       { "label": "Cum funcționează", "href": "#how-it-works" },
       { "label": "Prețuri", "href": "#pricing" },
       { "label": "Documentație", "href": "#", "isDocsLink": true }
@@ -35,7 +36,7 @@
     "clinicCard": {
       "label": "Pentru clinici",
       "title": "Modernizează-ți clinica",
-      "description": "Gestionează programări, doctori și pacienți dintr-un singur loc.",
+      "description": "Programări, doctori, pacienți și teleconsultații video — dintr-un singur loc.",
       "trustLine": "De la 129 RON/lună · 30 zile gratuit · anulezi oricând (notificari SMS incluse)",
       "primaryCta": {
         "text": "Înregistrează clinica",
@@ -107,6 +108,31 @@
       }
     ]
   },
+  "teleconsult": {
+    "label": "Teleconsultații · PRO+",
+    "title": "Consultații video, integrate nativ în platformă",
+    "subtitle": "Oferă pacienților consultații video direct din MediciRO — fără aplicații externe, fără instalări. Disponibil din planul Pro în sus.",
+    "items": [
+      {
+        "title": "Camere video private și securizate",
+        "description": "Fiecare consultație are o cameră dedicată, cu token de acces care expiră automat. Consultațiile nu sunt înregistrate de platformă."
+      },
+      {
+        "title": "Zero instalări pentru pacient",
+        "description": "Pacientul intră cu un singur click, direct din programarea lui — din browser sau din aplicația mobilă."
+      },
+      {
+        "title": "Date în UE, conform GDPR",
+        "description": "Fluxul video este fixat pe servere din Uniunea Europeană (Frankfurt). Confidențialitatea datelor medicale este respectată."
+      },
+      {
+        "title": "Mai puține no-show, arie mai mare",
+        "description": "Pacienții din alte orașe sau cu mobilitate redusă se consultă de acasă — clinica ta ajunge la mai mulți pacienți."
+      }
+    ],
+    "cta": { "text": "Vezi planurile Pro", "href": "#pricing" },
+    "note": "Inclus în planurile Pro și Enterprise."
+  },
   "howItWorks": {
     "label": "Cum funcționează",
     "title": "Pornești în 3 pași",
@@ -146,17 +172,20 @@
       {
         "caption": "Dashboard Clinică",
         "description": "Vizualizează toate programările zilei, alertele și statisticile clinicii.",
-        "image": "/screenshots/dashboard-rapoarte-clinica.png"
+        "image": "/screenshots/dashboard-rapoarte-clinica.png",
+        "url": "/dashboard"
       },
       {
         "caption": "Calendar Doctor",
         "description": "Calendarul personal al medicului cu slot-uri libere și ocupate.",
-        "image": "/screenshots/orar-doctor.png"
+        "image": "/screenshots/orar-doctor.png",
+        "url": "/doctor/program"
       },
       {
         "caption": "Programare Pacient",
         "description": "Fluxul simplu prin care pacientul alege doctorul și intervalul orar.",
-        "image": "/screenshots/calendar-programare-pacient.png"
+        "image": "/screenshots/calendar-programare-pacient.png",
+        "url": "/patient/booking"
       }
     ]
   },
@@ -197,6 +226,7 @@
         "features": [
           "Până la 15 doctori",
           "Programări online nelimitate",
+          "Teleconsultații video integrate",
           "Recepție cu programări manuale",
           "Notificări SMS & email",
           "Aplicație mobilă",
@@ -217,6 +247,7 @@
         "description": "Soluție dedicată pentru rețele de clinici. Funcționalități custom evaluate la cerere.",
         "features": [
           "Doctori nelimitați",
+          "Teleconsultații video integrate",
           "Branding personalizat",
           "Funcționalități la cerere (preț individualizat)",
           "Integrări API custom",
