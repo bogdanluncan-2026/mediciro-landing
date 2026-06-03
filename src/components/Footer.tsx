@@ -68,6 +68,11 @@ export default function Footer({ onDocsClick }: { onDocsClick?: () => void }) {
             {footer.statusText}
           </div>
         </div>
+
+        {/* Legal identification — Legea 365/2002 */}
+        <p className="text-xs text-gray-600 pt-4 text-center sm:text-left">
+          {meta.companyLegalName} · CUI {meta.cui} · {meta.regCom} · {meta.companyAddress}
+        </p>
       </div>
     </footer>
   )

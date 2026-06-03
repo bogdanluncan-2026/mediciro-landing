@@ -2,6 +2,10 @@
   "meta": {
     "siteName": "MediciRO",
     "companyName": "Codelium",
+    "companyLegalName": "CODELIUM S.R.L.",
+    "cui": "54798352",
+    "regCom": "J2026035711001",
+    "companyAddress": "Sat Sântandrei, Comuna Sântandrei, Jud. Bihor, Str. Salciei nr. 10",
     "companyUrl": "https://mediciro.ro",
     "appUrl": "https://app.mediciro.ro",
     "contactEmail": "contact@mediciro.ro"
@@ -425,8 +429,8 @@
         "title": "Companie",
         "links": [
           { "label": "Contact", "href": "mailto:contact@mediciro.ro" },
-          { "label": "Termeni & Condiții", "href": "#" },
-          { "label": "GDPR / Confidențialitate", "href": "#" }
+          { "label": "Termeni & Condiții", "href": "https://app.mediciro.ro/terms" },
+          { "label": "GDPR / Confidențialitate", "href": "https://app.mediciro.ro/privacy" }
         ]
       },
       {
@@ -439,6 +443,6 @@
       }
     ],
     "statusText": "Toate sistemele funcționează normal",
-    "copyright": "© {year} {company} SRL. Toate drepturile rezervate."
+    "copyright": "© {year} CODELIUM S.R.L. Toate drepturile rezervate."
   }
 }
