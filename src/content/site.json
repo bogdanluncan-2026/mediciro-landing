@@ -430,7 +430,8 @@
         "links": [
           { "label": "Contact", "href": "mailto:contact@mediciro.ro" },
           { "label": "Termeni & Condiții", "href": "https://app.mediciro.ro/terms" },
-          { "label": "GDPR / Confidențialitate", "href": "https://app.mediciro.ro/privacy" }
+          { "label": "GDPR / Confidențialitate", "href": "https://app.mediciro.ro/privacy" },
+          { "label": "Politica de cookies", "href": "https://app.mediciro.ro/cookies" }
         ]
       },
       {

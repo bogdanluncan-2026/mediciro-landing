@@ -27,12 +27,12 @@ export default function CookieConsentBanner() {
           Folosim cookie-uri pentru a analiza traficul și a îmbunătăți experiența pe site.
           Nu colectăm date personale fără acordul dvs.{' '}
           <a
-            href="https://app.mediciro.ro/privacy"
+            href="https://app.mediciro.ro/cookies"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-blue-600 underline underline-offset-2 hover:text-blue-700"
           >
-            Politica de Confidențialitate
+            Politica de cookies
           </a>
           .
         </p>
