@@ -3,6 +3,7 @@ import siteData from '../content/site.json'
 import WhatsAppButton from '../components/WhatsAppButton'
 import TeleconsultDemo from '../components/TeleconsultDemo'
 import { trackCta } from '../utils/analytics'
+import { useSeo } from '../hooks/useSeo'
 
 const { cliniciPage, pricing, howItWorks } = siteData
 
@@ -85,8 +86,31 @@ function FaqAccordion({ items }: { items: { q: string; a: string }[] }) {
 export default function CliniciLanding() {
   const { hero, testimonials, video, features, faq, finalCta, footer } = cliniciPage
 
+  useSeo({
+    title: 'MediciRO pentru clinici — Software de programări și management clinică',
+    description:
+      'Soluția MediciRO pentru clinici private: programări online, orar pe doctori, teleconsultații, notificări automate și facturare. Începe gratuit perioada de probă.',
+    canonical: 'https://mediciro.ro/clinici',
+  })
+
   return (
     <div className="min-h-screen bg-white font-sans">
+
+      {/* SEO: FAQPage structured data (rich results) generat din conținutul FAQ */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faq.items.map((it: { q: string; a: string }) => ({
+              '@type': 'Question',
+              name: it.q,
+              acceptedAnswer: { '@type': 'Answer', text: it.a },
+            })),
+          }),
+        }}
+      />
 
       {/* ── Minimal Navbar ─────────────────────────────────────────────── */}
       <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100">

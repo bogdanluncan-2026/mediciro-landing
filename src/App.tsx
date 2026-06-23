@@ -15,8 +15,16 @@ import DocsOverlay from './components/DocsOverlay'
 import WhatsAppButton from './components/WhatsAppButton'
 import CliniciLanding from './pages/CliniciLanding'
 import CookieConsentBanner from './components/CookieConsentBanner'
+import { useSeo } from './hooks/useSeo'
 
 function HomePage() {
+  useSeo({
+    title: 'MediciRO — Programări Medicale Online pentru Clinici Private',
+    description:
+      'Platformă de programări online și teleconsultații pentru clinici private din România. Gestionează doctori, pacienți, programări și plăți dintr-un singur loc.',
+    canonical: 'https://mediciro.ro/',
+  })
+
   const [docsOpen, setDocsOpen] = useState(() => window.location.hash === '#documentatie')
 
   function openDocs() {

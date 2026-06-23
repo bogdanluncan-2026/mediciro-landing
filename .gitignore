@@ -3,3 +3,6 @@ dist/
 .claude/worktrees/
 bucket-policy.json
 redirect-config.json
+
+# Microsoft Office lock/temp files
+~$*

@@ -1,6 +1,6 @@
 {
   "RedirectAllRequestsTo": {
-    "HostName": "www.lunaxbit.ro",
+    "HostName": "mediciro.ro",
     "Protocol": "https"
   }
 }
