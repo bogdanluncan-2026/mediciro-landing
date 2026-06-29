@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import BetaBanner from './components/BetaBanner'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -55,7 +54,6 @@ function HomePage() {
         <DocsOverlay onClose={closeDocs} />
       ) : (
         <>
-          <BetaBanner />
           <Navbar onDocsClick={openDocs} />
           <main>
             <Hero />
