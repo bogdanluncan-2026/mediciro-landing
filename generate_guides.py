@@ -216,6 +216,7 @@ SUPPORT = [
 
 ADMIN = [
     ("h1", "Ce poți face ca administrator de clinică"),
+    ("img", ("public/screenshots/admin/01-dashboard.png", "Tabloul de bord al clinicii")),
     ("p", "Contul de administrator înregistrează clinica și o configurează. De aici adaugi medici și "
           "personal, stabilești programul, politicile de anulare și notificările, urmărești programările "
           "și administrezi abonamentul."),
@@ -252,6 +253,7 @@ ADMIN = [
 
     ("h1", "Medici și personal"),
     ("h2", "Invitarea unui medic"),
+    ("img", ("public/screenshots/admin/02-doctori.png", "Lista medicilor clinicii")),
     ("steps", [
         "Mergi la Doctori și apasă Adaugă doctor.",
         "Introdu adresa de e-mail. Dacă medicul există deja în MediciRO la altă clinică, datele de "
@@ -278,9 +280,11 @@ ADMIN = [
     ("break", None),
     ("h1", "Programări"),
     ("h2", "Lista programărilor"),
+    ("img", ("public/screenshots/admin/03-lista-programari.png", "Programările clinicii, cu filtre")),
     ("p", "Lista completă a clinicii, cu filtre pe status, medic și perioadă. Fiecare programare arată "
           "pacientul, medicul, tipul (fizic sau teleconsultație) și starea plății."),
     ("h2", "Calendar și programări manuale"),
+    ("img", ("public/screenshots/admin/04-calendar.png", "Calendarul, pentru programări manuale")),
     ("p", "Calendarul arată orarul pe zile și permite adăugarea unei programări direct într-un interval "
           "liber — pentru pacienții care sună sau vin la recepție."),
     ("p", "Când introduci numărul de telefon, aplicația caută automat un pacient existent cu același "
@@ -299,6 +303,7 @@ ADMIN = [
           "Aplicația reține cine a făcut modificarea și când."),
 
     ("h1", "Agenda comună a clinicii"),
+    ("img", ("public/screenshots/admin/05-agenda-clinicii.png", "Agenda: disponibilitatea colegilor pe o săptămână")),
     ("p", "Agenda arată, într-un singur tabel, disponibilitatea tuturor medicilor pe o săptămână. Un "
           "medic poate astfel îndruma pacientul către cel mai apropiat coleg liber și poate programa "
           "direct în orarul acestuia."),
@@ -314,6 +319,7 @@ ADMIN = [
              "programări este o informație sensibilă."),
 
     ("h1", "Centre de tratament"),
+    ("img", ("public/screenshots/admin/06-centre-tratament.png", "Centrele de tratament și asistenții lor")),
     ("p", "Centrele de tratament sunt locații partenere cu asistenți proprii, unde pacientul se află "
           "fizic, iar medicul se conectează video. Disponibile în planul PRO."),
     ("steps", [
@@ -341,6 +347,7 @@ ADMIN = [
           "programările fizice și pentru teleconsultații."),
 
     ("h1", "Abonament și facturare"),
+    ("img", ("public/screenshots/admin/10-facturare.png", "Planul curent și funcționalitățile incluse")),
     ("h2", "Planuri"),
     ("bullets", [
         "BASIC — până la 3 medici, o locație, programări online, pagină publică, rapoarte de bază, "
@@ -373,6 +380,7 @@ ADMIN = [
 
 FRONTDESK = [
     ("h1", "Ce poți face ca recepție"),
+    ("img", ("public/screenshots/frontdesk/01-dashboard.png", "Tabloul de bord al recepției")),
     ("p", "Contul de recepție este făcut pentru lucrul zilnic cu pacienții: programări la telefon sau la "
           "ghișeu, confirmări, anulări și reprogramări. Nu are acces la setările clinicii sau la abonament."),
 
@@ -384,6 +392,7 @@ FRONTDESK = [
           "se deschide într-o listă din care vezi telefonul pacientului, notele și detaliile."),
 
     ("h1", "Programare nouă"),
+    ("img", ("public/screenshots/frontdesk/02-calendar.png", "Calendarul, de unde se adaugă o programare")),
     ("steps", [
         "Deschide Calendar și programări manuale și alege medicul și ziua.",
         "Apasă pe intervalul liber dorit.",
@@ -399,6 +408,7 @@ FRONTDESK = [
           "CNP-ul și numărul de contract, dacă le ai."),
 
     ("h1", "Confirmare, anulare, reprogramare"),
+    ("img", ("public/screenshots/frontdesk/03-programari.png", "Lista programărilor")),
     ("bullets", [
         "Confirmarea trimite automat notificare pacientului.",
         "Anularea cere un motiv, care ajunge în notificarea către pacient.",
@@ -406,6 +416,7 @@ FRONTDESK = [
     ]),
 
     ("h1", "Pacienți"),
+    ("img", ("public/screenshots/frontdesk/04-pacienti.png", "Pacienții clinicii")),
     ("p", "Lista pacienților clinicii, cu căutare după nume, telefon sau CNP. De aici vezi istoricul "
           "programărilor unui pacient."),
 
@@ -422,6 +433,7 @@ FRONTDESK = [
 
 DOCTOR = [
     ("h1", "Ce poți face ca medic"),
+    ("img", ("public/screenshots/doctor/01-dashboard.png", "Tabloul de bord al medicului")),
     ("p", "Contul de medic îți arată programările proprii și îți permite să îți stabilești orarul și "
           "concediile și să ții teleconsultații video. În funcție de setările clinicii, poți vedea și "
           "agenda colegilor sau porni sesiuni instant către centre de tratament."),
@@ -430,6 +442,7 @@ DOCTOR = [
 
     ("break", None),
     ("h1", "Profilul tău"),
+    ("img", ("public/screenshots/doctor/07-profil.png", "Profilul medicului, cu specialitate și cod de parafă")),
     ("p", "În profil completezi specialitatea, subspecialitatea, biografia și codul de parafă. "
           "Titulatura „Dr.” apare în fața numelui doar dacă ai cod de parafă completat."),
     ("note", "Specialitatea se alege dintr-o listă predefinită. Dacă a ta lipsește, cere-i "
@@ -439,6 +452,7 @@ DOCTOR = [
           "tarifele sunt separate pe fiecare clinică, iar selecția se păstrează între pagini."),
 
     ("h1", "Programul de lucru"),
+    ("img", ("public/screenshots/doctor/03-programul-meu.png", "Programul de lucru și concediile")),
     ("steps", [
         "Deschide Programul meu și alege clinica și locația.",
         "Adaugă intervalele de lucru pe fiecare zi a săptămânii.",
@@ -453,6 +467,7 @@ DOCTOR = [
 
     ("break", None),
     ("h1", "Programările mele"),
+    ("img", ("public/screenshots/doctor/02-programarile-mele.png", "Programările proprii")),
     ("p", "Lista programărilor tale, filtrată pe clinica selectată. Poți confirma, finaliza, anula sau "
           "reprograma, și poți vedea datele de contact și notele pacientului."),
     ("p", "Dacă finalizezi din greșeală o programare, o poți readuce cu un pas înapoi, indicând motivul. "
@@ -471,6 +486,7 @@ DOCTOR = [
              "consultație la care pacientul nu s-a conectat nu se facturează."),
 
     ("h1", "Agenda clinicii"),
+    ("img", ("public/screenshots/doctor/04-agenda-clinicii.png", "Agenda clinicii, văzută de medic")),
     ("p", "Dacă administratorul a activat-o, vezi disponibilitatea colegilor pe o săptămână și poți "
           "programa direct la un coleg liber — util când pacientul tău are nevoie de o consultație mai "
           "devreme decât ai tu loc."),
@@ -482,6 +498,7 @@ DOCTOR = [
     ]),
 
     ("h1", "Sesiuni instant către centre de tratament"),
+    ("img", ("public/screenshots/doctor/05-sesiune-instant.png", "Lansarea unei sesiuni instant")),
     ("p", "Dacă ai primit permisiunea, poți porni o consultație video imediată către un asistent aflat "
           "lângă pacient, într-un centru partener."),
     ("steps", [
@@ -527,6 +544,7 @@ ASSISTANT = [
 
     ("break", None),
     ("h1", "Cum primești o sesiune"),
+    ("img", ("public/screenshots/assistant/01-sesiunile-mele.png", "Sesiunile asistentului: active și istoric")),
     ("p", "Când un medic pornește o sesiune către tine primești o notificare și un e-mail cu link direct. "
           "Sesiunea apare și în pagina ta, la Sesiuni active."),
     ("steps", [
@@ -568,6 +586,7 @@ ASSISTANT = [
 
 PATIENT = [
     ("h1", "Bine ai venit"),
+    ("img", ("public/screenshots/patient/01-dashboard.png", "Programările tale")),
     ("p", "Cu MediciRO te programezi la clinica ta fără telefoane, primești reminder înainte de "
           "consultație și poți avea consultații video de acasă. Poți folosi aplicația din browser, la "
           "app.mediciro.ro, sau aplicația de Android din Google Play."),
@@ -588,6 +607,7 @@ PATIENT = [
 
     ("break", None),
     ("h1", "Cum faci o programare"),
+    ("img", ("public/screenshots/patient/02-programare-noua.png", "Alegerea specialității și a medicului")),
     ("steps", [
         "Apasă Programare nouă.",
         "Alege specialitatea de care ai nevoie sau caută direct medicul după nume.",
@@ -617,10 +637,12 @@ PATIENT = [
           "ești contactat telefonic de recepție."),
 
     ("h1", "Notificări"),
+    ("img", ("public/screenshots/patient/03-notificari.png", "Notificările primite")),
     ("p", "Primești confirmări, remindere înainte de consultație și înștiințări la anulare. Dacă ai "
           "aplicația instalată, ajung ca notificări pe telefon; altfel, prin SMS și e-mail."),
 
     ("h1", "Datele tale"),
+    ("img", ("public/screenshots/patient/04-profil.png", "Profilul și datele personale")),
     ("p", "Datele medicale sunt stocate criptat, pe servere din Uniunea Europeană. Ai dreptul să îți vezi "
           "datele, să le corectezi și să îți ștergi contul, direct din profil."),
     ("p", "Consultațiile video nu sunt înregistrate de platformă."),
