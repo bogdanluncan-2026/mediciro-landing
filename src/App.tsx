@@ -18,9 +18,9 @@ import { useSeo } from './hooks/useSeo'
 
 function HomePage() {
   useSeo({
-    title: 'MediciRO — Programări Medicale Online pentru Clinici Private',
+    title: 'MediciRO — Programări online & teleconsultații pentru clinici',
     description:
-      'Platformă de programări online și teleconsultații pentru clinici private din România. Gestionează doctori, pacienți, programări și plăți dintr-un singur loc.',
+      'Software de programări online și teleconsultații pentru clinici private din România. Pacienții se programează singuri 24/7. Mai puține neprezentări. 30 de zile gratuit.',
     canonical: 'https://mediciro.ro/',
   })
 

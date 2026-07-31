@@ -87,9 +87,9 @@ export default function CliniciLanding() {
   const { hero, testimonials, video, features, faq, finalCta, footer } = cliniciPage
 
   useSeo({
-    title: 'MediciRO pentru clinici — Software de programări și management clinică',
+    title: 'Software de programări online pentru clinici | MediciRO',
     description:
-      'Soluția MediciRO pentru clinici private: programări online, orar pe doctori, teleconsultații, notificări automate și facturare. Începe gratuit perioada de probă.',
+      'Platformă de programări online, orar pe doctori, teleconsultații și reminder automat anti no-show pentru clinici private. Începe cu 30 de zile gratuit.',
     canonical: 'https://mediciro.ro/clinici',
   })
 

@@ -106,6 +106,9 @@ function AddonCard() {
   const addon = pricingAddon
   const { ref, isInView } = useScrollAnimation()
 
+  // No add-on declared in the content — render nothing rather than an empty priced card.
+  if (!addon) return null
+
   return (
     <motion.div
       ref={ref}
