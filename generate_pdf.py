@@ -20,8 +20,9 @@ from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import cm
-from reportlab.platypus import (BaseDocTemplate, Frame, ListFlowable, ListItem, NextPageTemplate,
-                                PageBreak, PageTemplate, Paragraph, Spacer)
+from reportlab.platypus import (BaseDocTemplate, Frame, Image, ListFlowable, ListItem,
+                                NextPageTemplate, PageBreak, PageTemplate, Paragraph, Spacer)
+from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from reportlab.pdfbase.ttfonts import TTFont
@@ -104,6 +105,8 @@ def styles():
                                     alignment=TA_CENTER, textColor=MUTED),
         "tocTitle": ParagraphStyle("tocTitle", fontName=BOLD, fontSize=16,
                                    textColor=BRAND, spaceAfter=14),
+        "caption": ParagraphStyle("caption", fontName=ITALIC, fontSize=8.5, leading=12,
+                                  alignment=TA_CENTER, textColor=MUTED, spaceBefore=3, spaceAfter=12),
     }
     return s
 
@@ -174,9 +177,32 @@ def flow(blocks, s):
             out.append(Paragraph(f'<font color="#1E3A8A"><b>Notă:</b></font> {escape(value)}', s["note"]))
         elif kind == "warn":
             out.append(Paragraph(f'<font color="#B45309"><b>Atenție:</b></font> {escape(value)}', s["note"]))
+        elif kind == "img":
+            out.extend(picture(value, s))
         elif kind == "break":
             out.append(PageBreak())
     return out
+
+
+def picture(value, s):
+    """
+    Insereaza o captura de ecran, scalata la latimea paginii. `value` este (cale, legenda).
+
+    O captura lipsa nu opreste generarea: ghidul se produce fara ea, cu un avertisment in consola.
+    Altfel, o redenumire de ruta in aplicatie ar bloca publicarea intregii documentatii.
+    """
+    path, caption = value
+    if not os.path.exists(path):
+        print(f"  ! lipseste captura {path}")
+        return []
+    reader = ImageReader(path)
+    width_px, height_px = reader.getSize()
+    max_width = A4[0] - 2 * 2.4 * cm
+    width = min(max_width, width_px * 0.5)          # capturile sunt facute la scale 2
+    height = width * height_px / width_px
+    img = Image(path, width=width, height=height)
+    img.hAlign = "CENTER"
+    return [Spacer(1, 4), img, Paragraph(escape(caption), s["caption"])]
 
 
 def build(filename, title, subtitle, accent, blocks):
