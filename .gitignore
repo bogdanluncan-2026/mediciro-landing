@@ -6,3 +6,4 @@ redirect-config.json
 
 # Microsoft Office lock/temp files
 ~$*
+__pycache__/

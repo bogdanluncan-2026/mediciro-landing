@@ -12,17 +12,39 @@
   },
   "navbar": {
     "links": [
-      { "label": "Funcționalități", "href": "#features" },
-      { "label": "Teleconsultații", "href": "#teleconsult" },
-      { "label": "Cum funcționează", "href": "#how-it-works" },
-      { "label": "Prețuri", "href": "#pricing" },
-      { "label": "Documentație", "href": "#", "isDocsLink": true }
+      {
+        "label": "Funcționalități",
+        "href": "#features"
+      },
+      {
+        "label": "Teleconsultații",
+        "href": "#teleconsult"
+      },
+      {
+        "label": "Cum funcționează",
+        "href": "#how-it-works"
+      },
+      {
+        "label": "Prețuri",
+        "href": "#pricing"
+      },
+      {
+        "label": "Documentație",
+        "href": "#",
+        "isDocsLink": true
+      }
     ],
     "loginDropdown": {
       "label": "Autentificare",
       "items": [
-        { "label": "Clinică", "href": "https://app.mediciro.ro/login" },
-        { "label": "Pacient", "href": "https://app.mediciro.ro/patient/login" }
+        {
+          "label": "Clinică",
+          "href": "https://app.mediciro.ro/login"
+        },
+        {
+          "label": "Pacient",
+          "href": "https://app.mediciro.ro/patient/login"
+        }
       ]
     }
   },
@@ -67,10 +89,22 @@
     "title": "100% gratuit, pentru totdeauna",
     "subtitle": "Aplicația MediciRO pentru pacienți este și va rămâne complet gratuită — fără abonament, fără reclame, fără surprize.",
     "highlights": [
-      { "icon": "free", "text": "Fără cost, niciodată" },
-      { "icon": "noAds", "text": "Fără reclame" },
-      { "icon": "clean", "text": "Interfață curată și intuitivă" },
-      { "icon": "fast", "text": "Programare în 30 de secunde" }
+      {
+        "icon": "free",
+        "text": "Fără cost, niciodată"
+      },
+      {
+        "icon": "noAds",
+        "text": "Fără reclame"
+      },
+      {
+        "icon": "clean",
+        "text": "Interfață curată și intuitivă"
+      },
+      {
+        "icon": "fast",
+        "text": "Programare în 30 de secunde"
+      }
     ],
     "cta": {
       "text": "Creează cont gratuit",
@@ -84,27 +118,39 @@
     "items": [
       {
         "icon": "calendar",
-        "title": "Programări Online",
-        "description": "Pacienții se programează direct din browser sau aplicație mobilă, 24/7. Calendarul tău se actualizează în timp real.",
-        "color": "blue"
+        "color": "blue",
+        "title": "Programări online",
+        "description": "Pacienții se programează singuri din browser sau din aplicație, 24/7. Orarul fiecărui medic se actualizează în timp real, iar recepția poate adăuga oricând programări manuale."
+      },
+      {
+        "icon": "users",
+        "color": "indigo",
+        "title": "Agenda comună a clinicii",
+        "description": "Medicii văd într-un singur tabel disponibilitatea colegilor pe o săptămână și pot programa direct la cel mai apropiat coleg liber. Se activează din Setări, de administratorul clinicii."
+      },
+      {
+        "icon": "video",
+        "color": "emerald",
+        "title": "Teleconsultații video",
+        "description": "Consultații video fără instalări, cu plata online a consultației sau gratuite pentru pacient. Camerele sunt private, iar fluxul video rămâne în Uniunea Europeană."
       },
       {
         "icon": "building",
-        "title": "Management Clinică",
-        "description": "Administrează doctori, specialități, săli de consultație și resurse din tabloul de bord centralizat.",
-        "color": "indigo"
-      },
-      {
-        "icon": "mobile",
-        "title": "Aplicație Mobilă",
-        "description": "Aplicație mobilă Android pentru medici și pacienți. Acces la programări și notificări oricând, direct de pe telefon.",
-        "color": "violet"
+        "color": "violet",
+        "title": "Centre de tratament",
+        "description": "Centre partenere cu asistenți proprii: medicul pornește o sesiune instant către asistentul de lângă pacient. Plătești doar timpul în care sunt efectiv doi participanți în sesiune."
       },
       {
         "icon": "bell",
-        "title": "Notificări Automate",
-        "description": "SMS și email automat pentru confirmări, reminder-uri și anulări. Reduci no-show-urile cu până la 60% — conform studiilor din industrie.",
-        "color": "sky"
+        "color": "sky",
+        "title": "Notificări automate",
+        "description": "Confirmări, remindere și anulări, trimise automat. Pacienții cu aplicația primesc notificare push, gratuit; ceilalți primesc SMS din pachetul inclus în plan."
+      },
+      {
+        "icon": "mobile",
+        "color": "orange",
+        "title": "Aplicație mobilă",
+        "description": "Aplicație Android pentru pacienți, medici, recepție și asistenți. Interfață în română, engleză și maghiară."
       }
     ]
   },
@@ -128,9 +174,16 @@
       {
         "title": "Mai puține no-show, arie mai mare",
         "description": "Pacienții din alte orașe sau cu mobilitate redusă se consultă de acasă — clinica ta ajunge la mai mulți pacienți."
+      },
+      {
+        "title": "Plătești doar consultațiile care chiar au loc",
+        "description": "Teleconsultațiile plătite de pacient cu cardul au un comision de 10% din valoare. Cele oferite gratuit pacientului se contorizează la secundă, doar cât timp sunt cel puțin doi participanți în sesiune, și costă 5 RON/oră. O sesiune la care nu vine nimeni nu se facturează."
       }
     ],
-    "cta": { "text": "Vezi planurile Pro", "href": "#pricing" },
+    "cta": {
+      "text": "Vezi planurile Pro",
+      "href": "#pricing"
+    },
     "note": "Inclus în planurile Pro și Enterprise."
   },
   "howItWorks": {
@@ -207,9 +260,11 @@
         "features": [
           "Până la 3 doctori",
           "Programări online nelimitate",
-          "Notificări SMS & email",
-          "Aplicație mobilă",
-          "Suport prin email"
+          "Recepție cu programări manuale",
+          "Notificări push, SMS și email (100 SMS incluse, apoi 0,30 RON/SMS)",
+          "Pagină publică a clinicii",
+          "Rapoarte de bază",
+          "Aplicație mobilă (Android)"
         ],
         "ctaText": "Începe gratuit",
         "ctaHref": "https://app.mediciro.ro/register",
@@ -225,11 +280,12 @@
         "description": "Soluția completă pentru clinici medii care vor să crească.",
         "features": [
           "Până la 15 doctori",
-          "Programări online nelimitate",
+          "Tot ce include Basic",
           "Teleconsultații video integrate",
-          "Recepție cu programări manuale",
-          "Notificări SMS & email",
-          "Aplicație mobilă",
+          "Agenda comună a clinicii",
+          "Centre de tratament și sesiuni instant",
+          "Până la 3 locații",
+          "200 SMS incluse, apoi 0,30 RON/SMS",
           "Rapoarte avansate",
           "Suport prioritar"
         ],
@@ -247,69 +303,63 @@
         "description": "Soluție dedicată pentru rețele de clinici. Funcționalități custom evaluate la cerere.",
         "features": [
           "Doctori nelimitați",
-          "Teleconsultații video integrate",
-          "Branding personalizat",
+          "Tot ce include Pro",
+          "Locații nelimitate",
+          "Onboarding asistat",
           "Funcționalități la cerere (preț individualizat)",
-          "Integrări API custom",
-          "Onboarding asistat"
+          "Branding personalizat (în curând)",
+          "Integrări API (în curând)"
         ],
         "ctaText": "Contactează-ne",
         "ctaHref": "mailto:contact@mediciro.ro",
         "highlighted": false,
         "badge": null
       }
-    ],
-    "addon": {
-      "name": "Notificări WhatsApp",
-      "price": "99",
-      "currency": "RON",
-      "period": "/lună",
-      "description": "Trimite notificări automate pacienților prin WhatsApp: confirmare programare, reminder cu 24h înainte și notificare anulare.",
-      "features": [
-        "Confirmare programare",
-        "Reminder 24h înainte",
-        "Notificare anulare",
-        "Outbound only (fără chat)"
-      ],
-      "ctaText": "Adaugă la abonament",
-      "ctaHref": "mailto:contact@mediciro.ro"
-    }
+    ]
   },
   "docs": {
     "label": "Documentație",
     "title": "Ghiduri de utilizare",
-    "subtitle": "Descarcă ghidul potrivit rolului tău și începe să folosești platforma în câteva minute.",
+    "subtitle": "Descarcă ghidul potrivit rolului tău. Fiecare are cuprins, ca să ajungi direct la funcționalitatea care te interesează.",
     "guides": [
       {
-        "role": "Administrator Clinică",
+        "role": "Administrator clinică",
         "icon": "building",
         "color": "blue",
-        "description": "Înregistrare, gestionare doctori, programări, rapoarte, setări clinică și abonament.",
+        "description": "Înregistrarea clinicii, medici și personal, programări, agenda comună, centre de tratament, setări, abonament și facturare.",
         "file": "/docs/Ghid_Administrator_Clinica.pdf",
         "available": true
       },
       {
-        "role": "Recepție / Frontdesk",
+        "role": "Recepție",
         "icon": "users",
         "color": "green",
-        "description": "Creare și gestionare programări manuale, confirmare, anulare și lucrul cu pacienții.",
-        "file": "/docs/Ghid_Frontdesk.pdf",
+        "description": "Programări la telefon și la ghișeu, confirmări, anulări, reprogramări și lucrul cu pacienții.",
+        "file": "/docs/Ghid_Receptie.pdf",
         "available": true
       },
       {
-        "role": "Doctor",
+        "role": "Medic",
         "icon": "stethoscope",
         "color": "purple",
-        "description": "Activare cont, setare program de lucru, vizualizare programări și teleconsultații.",
-        "file": "/docs/Ghid_Medici.pdf",
+        "description": "Program de lucru și concedii, programările proprii, teleconsultații, agenda clinicii și sesiuni instant.",
+        "file": "/docs/Ghid_Medic.pdf",
+        "available": true
+      },
+      {
+        "role": "Asistent centru de tratament",
+        "icon": "users",
+        "color": "blue",
+        "description": "Primirea sesiunilor instant de la medic, desfășurarea consultației lângă pacient și ce se întâmplă dacă pică conexiunea.",
+        "file": "/docs/Ghid_Asistent_Centru.pdf",
         "available": true
       },
       {
         "role": "Pacient",
         "icon": "heart",
         "color": "orange",
-        "description": "Creare cont, cum faci o programare online și cum intri la o teleconsultație.",
-        "file": "/docs/Ghid_Pacienti.pdf",
+        "description": "Crearea contului, programarea online, teleconsultațiile, anularea și datele tale personale.",
+        "file": "/docs/Ghid_Pacient.pdf",
         "available": true
       }
     ],
@@ -335,8 +385,14 @@
       "headlineAccent": "Pacienții tăi, mulțumiți.",
       "subtitle": "MediciRO automatizează programările, notificările și managementul clinicii — astfel încât echipa ta să se concentreze pe pacienți, nu pe telefoane.",
       "trustSignals": "Fără card de credit · Anulezi oricând · Setup în 30 minute",
-      "primaryCta": { "text": "Încearcă gratuit 30 zile", "href": "https://app.mediciro.ro/register" },
-      "secondaryCta": { "text": "Solicită o demonstrație", "href": "mailto:contact@mediciro.ro" }
+      "primaryCta": {
+        "text": "Încearcă gratuit 30 zile",
+        "href": "https://app.mediciro.ro/register"
+      },
+      "secondaryCta": {
+        "text": "Solicită o demonstrație",
+        "href": "mailto:contact@mediciro.ro"
+      }
     },
     "testimonials": [
       {
@@ -431,15 +487,33 @@
       "badge": "30 zile gratuite · Fără card · Anulezi oricând",
       "title": "Pregătit să modernizezi clinica ta?",
       "subtitle": "Înregistrează-ți clinica acum și începe să oferi programări online pacienților tăi în mai puțin de o oră.",
-      "primaryCta": { "text": "Înregistrează clinica", "href": "https://app.mediciro.ro/register" },
-      "secondaryCta": { "text": "Contactează-ne", "href": "mailto:contact@mediciro.ro" }
+      "primaryCta": {
+        "text": "Înregistrează clinica",
+        "href": "https://app.mediciro.ro/register"
+      },
+      "secondaryCta": {
+        "text": "Contactează-ne",
+        "href": "mailto:contact@mediciro.ro"
+      }
     },
     "footer": {
       "links": [
-        { "label": "Homepage", "href": "https://mediciro.ro" },
-        { "label": "Prețuri", "href": "https://mediciro.ro#pricing" },
-        { "label": "Contact", "href": "mailto:contact@mediciro.ro" },
-        { "label": "Autentificare", "href": "https://app.mediciro.ro/login" }
+        {
+          "label": "Homepage",
+          "href": "https://mediciro.ro"
+        },
+        {
+          "label": "Prețuri",
+          "href": "https://mediciro.ro#pricing"
+        },
+        {
+          "label": "Contact",
+          "href": "mailto:contact@mediciro.ro"
+        },
+        {
+          "label": "Autentificare",
+          "href": "https://app.mediciro.ro/login"
+        }
       ]
     }
   },
@@ -450,26 +524,57 @@
       {
         "title": "Produs",
         "links": [
-          { "label": "Funcționalități", "href": "#features" },
-          { "label": "Prețuri", "href": "#pricing" },
-          { "label": "Cum funcționează", "href": "#how-it-works" },
-          { "label": "Aplicație", "href": "https://app.mediciro.ro" }
+          {
+            "label": "Funcționalități",
+            "href": "#features"
+          },
+          {
+            "label": "Prețuri",
+            "href": "#pricing"
+          },
+          {
+            "label": "Cum funcționează",
+            "href": "#how-it-works"
+          },
+          {
+            "label": "Aplicație",
+            "href": "https://app.mediciro.ro"
+          }
         ]
       },
       {
         "title": "Companie",
         "links": [
-          { "label": "Contact", "href": "mailto:contact@mediciro.ro" },
-          { "label": "Termeni & Condiții", "href": "https://app.mediciro.ro/terms" },
-          { "label": "GDPR / Confidențialitate", "href": "https://app.mediciro.ro/privacy" },
-          { "label": "Politica de cookies", "href": "https://app.mediciro.ro/cookies" }
+          {
+            "label": "Contact",
+            "href": "mailto:contact@mediciro.ro"
+          },
+          {
+            "label": "Termeni & Condiții",
+            "href": "https://app.mediciro.ro/terms"
+          },
+          {
+            "label": "GDPR / Confidențialitate",
+            "href": "https://app.mediciro.ro/privacy"
+          },
+          {
+            "label": "Politica de cookies",
+            "href": "https://app.mediciro.ro/cookies"
+          }
         ]
       },
       {
         "title": "Suport",
         "links": [
-          { "label": "Documentație & Ghiduri de start", "href": "#", "isDocsLink": true },
-          { "label": "contact@mediciro.ro", "href": "mailto:contact@mediciro.ro" }
+          {
+            "label": "Documentație & Ghiduri de start",
+            "href": "#",
+            "isDocsLink": true
+          },
+          {
+            "label": "contact@mediciro.ro",
+            "href": "mailto:contact@mediciro.ro"
+          }
         ]
       }
     ],
