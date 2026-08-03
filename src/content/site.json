@@ -532,8 +532,8 @@
     },
     "treatmentCenters": {
       "label": "Centre de tratament · PRO+",
-      "title": "Telemedicină asistată, acolo unde pacientul nu poate ajunge la medic",
-      "subtitle": "Pacientul se prezintă la un centru partener, lângă el este un asistent, iar medicul se conectează video. Potrivit pentru zone fără medic, pentru monitorizare și pentru pacienți greu deplasabili.",
+      "title": "Telemedicină asistată, în centrele tale de tratament",
+      "subtitle": "Când pacientul se află într-un centru de tratament, medicul inițiază o sesiune video cu asistentul de acolo. Potrivit pentru monitorizare și pentru consultații cu pacienți greu deplasabili — sau pur și simplu când vrei să eviți deplasarea medicului până la centru.",
       "items": [
         {
           "title": "Sesiune pornită de medic, în câteva secunde",
