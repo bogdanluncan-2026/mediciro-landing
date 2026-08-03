@@ -12,7 +12,7 @@ continut. Fisierele .docx raman pentru cine vrea sa le editeze manual.
 
 Inlocuieste generate_docs.py, care producea ghiduri ramase mult in urma fata de aplicatie.
 
-Continutul reflecta aplicatia la 31 iulie 2026. Cand adaugi o functionalitate, actualizeaza si
+Continutul reflecta aplicatia la 3 august 2026. Cand adaugi o functionalitate, actualizeaza si
 capitolul corespunzator de aici — altfel ghidurile publicate raman in urma fara ca cineva sa observe.
 """
 
@@ -74,7 +74,7 @@ def title_page(doc, title, subtitle, color):
     doc.add_paragraph()
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = p.add_run("mediciro.ro  ·  contact@mediciro.ro  ·  iulie 2026")
+    run = p.add_run("mediciro.ro  ·  contact@mediciro.ro  ·  august 2026")
     run.font.size = Pt(10)
     run.font.color.rgb = MUTED
     doc.add_page_break()
@@ -150,9 +150,27 @@ def warn(doc, text):
     note(doc, text, label="Atenție", color=RGBColor(0xB4, 0x53, 0x09))
 
 
+def image(doc, value):
+    """Captura de ecran + legenda. Latimea e fixa, ca toate capturile sa arate la fel pe pagina."""
+    path, caption = value
+    if not os.path.exists(path):
+        # Capturile se refac cu capture_screens.mjs; lipsa lor nu trebuie sa opreasca generarea.
+        print(f"  (lipseste captura {path})")
+        return
+    doc.add_picture(path, width=Cm(15.5))
+    doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p.add_run(caption)
+    run.font.size = Pt(8.5)
+    run.font.italic = True
+    run.font.color.rgb = MUTED
+
+
 def render(blocks, doc):
     """Interpreteaza continutul declarat ca lista de tupluri (tip, valoare)."""
     handlers = {
+        "img": lambda v: image(doc, v),
         "h1": lambda v: h1(doc, v),
         "h2": lambda v: h2(doc, v),
         "p": lambda v: para(doc, v),
@@ -306,11 +324,11 @@ ADMIN = [
     ("img", ("public/screenshots/admin/05-agenda-clinicii.png", "Agenda: disponibilitatea colegilor pe o săptămână")),
     ("p", "Agenda arată, într-un singur tabel, disponibilitatea tuturor medicilor pe o săptămână. Un "
           "medic poate astfel îndruma pacientul către cel mai apropiat coleg liber și poate programa "
-          "direct în orarul acestuia."),
+          "direct în orarul acestuia. O văd atât medicii, cât și recepția."),
     ("p", "Disponibilă în planul PRO. Se activează din Setări, de către administratorul clinicii, prin "
           "două comutatoare separate:"),
     ("bullets", [
-        "Activarea agendei — medicii văd intervalele libere și ocupate ale colegilor.",
+        "Activarea agendei — medicii și recepția văd intervalele libere și ocupate ale medicilor.",
         "Afișarea numelor de pacienți — opțională, dezactivată implicit.",
     ]),
     ("note", "Al doilea comutator este separat intenționat. Faptul că un coleg este ocupat și cine este "
@@ -338,7 +356,9 @@ ADMIN = [
     ("bullets", [
         "Planul BASIC include 100 de SMS-uri pe lună, planul PRO 200.",
         "SMS-urile peste pachetul inclus se facturează la 0,30 RON bucata, la sfârșitul lunii.",
-        "Remindere: poți activa separat mesajul cu 24 de ore înainte și pe cel cu 2 ore înainte.",
+        "Remindere: poți activa separat mesajul timpuriu (cu aproximativ 12 ore înainte) și pe cel cu 2 ore înainte. "
+        "Nu trimitem notificări noaptea: programările de dimineață primesc reminderul seara precedentă, la ora 21:00, "
+        "iar restul la ora 8:00 în ziua programării. Programările care încep înainte de ora 9 primesc un singur reminder.",
     ]),
 
     ("h1", "Politici de anulare"),
@@ -419,6 +439,18 @@ FRONTDESK = [
     ("img", ("public/screenshots/frontdesk/04-pacienti.png", "Pacienții clinicii")),
     ("p", "Lista pacienților clinicii, cu căutare după nume, telefon sau CNP. De aici vezi istoricul "
           "programărilor unui pacient."),
+
+    ("h1", "Agenda clinicii"),
+    ("p", "Dacă administratorul a activat-o, vezi într-un singur ecran disponibilitatea tuturor medicilor "
+          "pe o săptămână — util când pacientul de la ghișeu întreabă „cel mai devreme când se poate?” și "
+          "nu vrei să deschizi orarul fiecărui medic pe rând."),
+    ("bullets", [
+        "Săptămâna curentă începe cu ziua de ieri.",
+        "Medicii sunt ordonați după cine are primul interval liber.",
+        "Vezi că un interval este ocupat, fără datele pacientului programat la alt medic.",
+    ]),
+    ("note", "Dacă nu găsești „Agenda clinicii” în meniu, înseamnă că administratorul nu a activat-o din "
+             "Setări sau că planul clinicii nu o include."),
 
     ("h1", "Pe telefon"),
     ("p", "Aplicația mobilă are aceleași funcții pentru recepție: tabloul de bord, programările, "
@@ -665,4 +697,5 @@ if __name__ == "__main__":
           "Primirea și desfășurarea sesiunilor instant", "assistant", ASSISTANT)
     build("Ghid_Pacient.docx", "Ghid Pacient",
           "Programări online, teleconsultații și contul tău", "patient", PATIENT)
-    print("\nUrmătorul pas: python generate_pdf.py")
+    # Fara diacritice: consola Windows ruleaza pe cp1252 si ar arunca la print.
+    print("\nUrmatorul pas: python generate_pdf.py")
