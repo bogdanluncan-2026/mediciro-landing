@@ -50,6 +50,7 @@ const FEATURE_COLORS: Record<string, string> = {
   indigo: 'bg-indigo-50 text-indigo-600',
   violet: 'bg-violet-50 text-violet-600',
   emerald: 'bg-emerald-50 text-emerald-600',
+  teal:   'bg-teal-50 text-teal-600',
 }
 
 /* ─── FAQ Accordion ──────────────────────────────────────────────────────── */
@@ -84,12 +85,12 @@ function FaqAccordion({ items }: { items: { q: string; a: string }[] }) {
 /* ─── Page ───────────────────────────────────────────────────────────────── */
 
 export default function CliniciLanding() {
-  const { hero, testimonials, video, features, faq, finalCta, footer } = cliniciPage
+  const { hero, testimonials, video, features, treatmentCenters, faq, finalCta, footer } = cliniciPage
 
   useSeo({
     title: 'Software de programări online pentru clinici | MediciRO',
     description:
-      'Platformă de programări online, orar pe doctori, teleconsultații și reminder automat anti no-show pentru clinici private. Începe cu 30 de zile gratuit.',
+      'Programări online, teleconsultații video și centre de tratament cu asistent lângă pacient, pentru clinici private din România. Notificări automate anti no-show. 30 de zile gratuit.',
     canonical: 'https://mediciro.ro/clinici',
   })
 
@@ -289,25 +290,6 @@ export default function CliniciLanding() {
             ))}
           </div>
 
-          {/* WhatsApp addon */}
-          <div className="mt-8 bg-green-50 border border-green-200 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
-              <svg className="w-7 h-7" viewBox="0 0 32 32" fill="currentColor">
-                <path d="M16 2C8.28 2 2 8.28 2 16c0 2.46.67 4.76 1.83 6.74L2 30l7.45-1.95A13.93 13.93 0 0 0 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm6.26 19.86c-.34-.17-2.02-1-2.33-1.11-.32-.11-.55-.17-.78.17s-.9 1.11-1.1 1.34c-.2.23-.4.26-.74.09-.34-.17-1.44-.53-2.74-1.69a10.3 10.3 0 0 1-1.9-2.36c-.2-.34-.02-.53.15-.7.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z" />
-              </svg>
-            </div>
-            <div className="flex-1">
-              <p className="font-bold text-gray-900 mb-0.5">{features.whatsappAddon.title}</p>
-              <p className="text-sm text-gray-600">{features.whatsappAddon.description}</p>
-            </div>
-            <a
-              href={features.whatsappAddon.ctaHref}
-              onClick={() => trackCta(features.whatsappAddon.ctaText, 'clinici_features', features.whatsappAddon.ctaHref)}
-              className="inline-flex items-center gap-1.5 bg-green-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-green-700 transition-colors flex-shrink-0"
-            >
-              {features.whatsappAddon.ctaText}
-            </a>
-          </div>
         </div>
       </section>
 
@@ -323,6 +305,30 @@ export default function CliniciLanding() {
           </div>
           <TeleconsultDemo />
           <p className="text-center text-sm text-gray-400 mt-8">{siteData.teleconsult.note}</p>
+        </div>
+      </section>
+
+      {/* ── Centre de tratament ────────────────────────────────────────── */}
+      {/* Sectiune proprie, nu un simplu punct in lista: pentru clinicile din zone fara medic
+          permanent e motivul principal de a alege platforma, nu o functionalitate in plus. */}
+      <section id="centre-tratament" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-teal-100 text-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+              {treatmentCenters.label}
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">{treatmentCenters.title}</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">{treatmentCenters.subtitle}</p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {treatmentCenters.items.map((item: { title: string; description: string }) => (
+              <div key={item.title} className="bg-white border border-gray-100 rounded-2xl p-6">
+                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-gray-400 mt-8">{treatmentCenters.note}</p>
         </div>
       </section>
 
