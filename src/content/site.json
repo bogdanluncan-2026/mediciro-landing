@@ -397,8 +397,8 @@
     "testimonials": [
       {
         "quote": "De când am implementat MediciRO, recepția noastră nu mai pierde timp cu telefoanele pentru programări. Totul vine online, organizat automat. Numarul pacientilor a crescut semnificativ.",
-        "name": "Delia Constantin",
-        "role": "Administrator, clinica Viva-Med",
+        "name": "Delia C.",
+        "role": "Administrator clinică",
         "city": "Oradea",
         "initials": "DC",
         "avatarColor": "bg-blue-600"
@@ -424,39 +424,45 @@
     "features": {
       "label": "Funcționalități",
       "title": "Tot ce ai nevoie, dintr-un singur loc",
-      "subtitle": "Construit specific pentru clinici private din România, nu adaptat dintr-un tool generic.",
+      "subtitle": "Construit pentru clinici private din România: programări, telemedicină și centre de tratament, într-o singură platformă.",
       "items": [
         {
           "icon": "calendar",
-          "title": "Programări Online 24/7",
-          "description": "Pacienții se programează direct din browser sau aplicație, fără telefoane la recepție. Calendarul se actualizează în timp real.",
-          "color": "blue"
+          "title": "Programări online 24/7",
+          "color": "blue",
+          "description": "Pacienții se programează singuri din browser sau din aplicație. Orarul fiecărui medic se actualizează în timp real, iar recepția intervine manual doar când e nevoie."
         },
         {
-          "icon": "bell",
-          "title": "Notificări Automate SMS & Email",
-          "description": "Confirmare, reminder cu 24h înainte și notificare anulare — complet automat. Reduci no-show-urile fără niciun efort suplimentar.",
-          "color": "sky"
+          "icon": "video",
+          "title": "Teleconsultații video",
+          "color": "emerald",
+          "description": "Consultații video direct din platformă, fără instalări pentru pacient. Plătite online cu cardul sau gratuite pentru pacient, la alegerea medicului. Din planul PRO."
+        },
+        {
+          "icon": "building",
+          "title": "Centre de tratament",
+          "color": "teal",
+          "description": "Centre partenere cu asistenți proprii: medicul pornește o sesiune instant către asistentul aflat lângă pacient. Plătești doar timpul în care sunt efectiv doi participanți în sesiune. Din planul PRO."
         },
         {
           "icon": "users",
-          "title": "Management Complet",
-          "description": "Doctori, specialități, săli, orar de lucru — totul dintr-un singur tablou de bord. Recepția gestionează manual programările când e nevoie.",
-          "color": "indigo"
+          "title": "Agenda comună a clinicii",
+          "color": "indigo",
+          "description": "Disponibilitatea tuturor medicilor într-un singur tabel, pe o săptămână. Recepția și medicii pot programa direct la colegul cu primul interval liber. Din planul PRO."
+        },
+        {
+          "icon": "bell",
+          "title": "Notificări automate",
+          "color": "sky",
+          "description": "Confirmări, remindere și anulări, trimise automat. Pacienții cu aplicația primesc notificare push, gratuit; ceilalți primesc SMS. Nu trimitem nimic noaptea."
         },
         {
           "icon": "chart",
-          "title": "Rapoarte & Statistici",
-          "description": "Câți pacienți noi, ce servicii sunt cele mai solicitate, ocuparea pe doctori — date clare pentru decizii mai bune.",
-          "color": "violet"
+          "title": "Rapoarte și facturare",
+          "color": "violet",
+          "description": "Pacienți noi, servicii cerute, ocuparea pe medici. Facturile se emit automat și pleacă în e-Factura (ANAF)."
         }
-      ],
-      "whatsappAddon": {
-        "title": "Add-on WhatsApp — 99 RON/lună",
-        "description": "Trimite notificări automate pacienților prin WhatsApp: confirmare programare, reminder cu 24h înainte, notificare anulare.",
-        "ctaText": "Adaugă la plan",
-        "ctaHref": "mailto:contact@mediciro.ro?subject=WhatsApp addon"
-      }
+      ]
     },
     "faq": {
       "label": "Întrebări frecvente",
@@ -480,6 +486,14 @@
         {
           "q": "Ce se întâmplă dacă vrem să renunțăm?",
           "a": "Poți anula oricând, fără penalități. În primele 30 de zile e complet gratuit — dacă nu ești mulțumit, nu plătești nimic. La anulare îți exportăm toate datele în format standard."
+        },
+        {
+          "q": "Cât costă o teleconsultație?",
+          "a": "Depinde de cum alege medicul la confirmare. Dacă pacientul plătește online cu cardul, MediciRO reține un comision de 10% din suma încasată. Dacă medicul scutește pacientul de plată — de exemplu un serviciu decontat prin CAS — clinica plătește 5 lei pe oră, contorizat la secundă, doar pentru consultațiile care au avut loc efectiv."
+        },
+        {
+          "q": "Ce este un centru de tratament și de ce am avea nevoie de unul?",
+          "a": "Este o locație parteneră unde pacientul se prezintă fizic și unde un asistent stă lângă el, în timp ce medicul se conectează video. Ajută acolo unde nu ai medic permanent, la monitorizarea pacienților cronici și la cei care se deplasează greu. Se tarifează la timp, 5 lei pe oră contorizat la secundă, și numai când medicul și asistentul sunt simultan în sesiune."
         }
       ]
     },
@@ -515,6 +529,30 @@
           "href": "https://app.mediciro.ro/login"
         }
       ]
+    },
+    "treatmentCenters": {
+      "label": "Centre de tratament · PRO+",
+      "title": "Telemedicină asistată, acolo unde pacientul nu poate ajunge la medic",
+      "subtitle": "Pacientul se prezintă la un centru partener, lângă el este un asistent, iar medicul se conectează video. Potrivit pentru zone fără medic, pentru monitorizare și pentru pacienți greu deplasabili.",
+      "items": [
+        {
+          "title": "Sesiune pornită de medic, în câteva secunde",
+          "description": "Medicul alege centrul și pornește sesiunea. Asistentul primește notificare și intră lângă pacient."
+        },
+        {
+          "title": "Asistentul are rolul lui în platformă",
+          "description": "Cont propriu, cu acces doar la sesiunile centrului său și la pacienții centrului — nu la restul clinicii."
+        },
+        {
+          "title": "Plătești timpul, nu abonamentul",
+          "description": "5 lei pe oră, contorizat la secundă, și numai cât sunt efectiv amândoi în sesiune. O sesiune la care asistentul nu se conectează nu costă nimic."
+        },
+        {
+          "title": "Se decontează lunar, transparent",
+          "description": "Toate sesiunile perioadei apar pe o factură separată, cu durata fiecăreia."
+        }
+      ],
+      "note": "Disponibil din planul PRO. Centrele și asistenții se configurează din panoul clinicii."
     }
   },
   "footer": {
