@@ -225,7 +225,7 @@ def build(filename, title, subtitle, accent, blocks):
         Paragraph(escape(title), s["coverTitle"]),
         Paragraph(escape(subtitle), s["coverSub"]),
         Spacer(1, 3 * cm),
-        Paragraph("mediciro.ro  ·  contact@mediciro.ro  ·  iulie 2026", s["coverFoot"]),
+        Paragraph("mediciro.ro  ·  contact@mediciro.ro  ·  august 2026", s["coverFoot"]),
         NextPageTemplate("content"),
         PageBreak(),
         Paragraph("Cuprins", s["tocTitle"]),
