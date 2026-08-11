@@ -2,6 +2,7 @@ import { useState } from 'react'
 import siteData from '../content/site.json'
 import WhatsAppButton from '../components/WhatsAppButton'
 import TeleconsultDemo from '../components/TeleconsultDemo'
+import RoiCalculator from '../components/RoiCalculator'
 import { trackCta } from '../utils/analytics'
 import { useSeo } from '../hooks/useSeo'
 
@@ -431,6 +432,27 @@ export default function CliniciLanding() {
             ))}
           </div>
           <p className="text-center text-sm text-gray-400 mt-6">{pricing.footnote}</p>
+        </div>
+      </section>
+
+      {/* ── Calculator ROI ─────────────────────────────────────────────── */}
+      <section id="calculator-roi" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-blue-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+              Calculator ROI
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Cât câștigă clinica ta cu MediciRO?</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">
+              Trage de slidere cu cifrele tale și vezi câștigul net estimat pe lună și pe an — după ce scazi costul MediciRO.
+            </p>
+          </div>
+          <RoiCalculator />
+          <p className="max-w-3xl mx-auto text-center text-xs text-gray-400 mt-8 leading-relaxed">
+            Estimări orientative — depind de volumul, tarifele și rata reală de neprezentare a clinicii. Nu sunt incluse:
+            timpul economisit al medicului, deplasările evitate la centrele de tratament și valoarea pe termen lung a
+            pacienților noi — deci câștigul real e, de regulă, mai mare.
+          </p>
         </div>
       </section>
 
