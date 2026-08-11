@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import siteData from '../content/site.json'
 import WhatsAppButton from '../components/WhatsAppButton'
 import TeleconsultDemo from '../components/TeleconsultDemo'
@@ -94,6 +94,23 @@ export default function CliniciLanding() {
       'Programări online, teleconsultații video și centre de tratament cu asistent lângă pacient, pentru clinici private din România. Notificări automate anti no-show. 30 de zile gratuit.',
     canonical: 'https://mediciro.ro/clinici',
   })
+
+  // SPA: ancorele (#calculator-roi) nu functioneaza nativ la load, pentru ca
+  // sectiunea e randata de React dupa parsarea URL-ului. Derulam noi la hash.
+  useEffect(() => {
+    const id = window.location.hash.replace('#', '')
+    if (!id) return
+    const scrollToHash = () => {
+      const el = document.getElementById(id)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    const t = setTimeout(scrollToHash, 300)
+    window.addEventListener('load', scrollToHash)
+    return () => {
+      clearTimeout(t)
+      window.removeEventListener('load', scrollToHash)
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-white font-sans">
@@ -436,7 +453,7 @@ export default function CliniciLanding() {
       </section>
 
       {/* ── Calculator ROI ─────────────────────────────────────────────── */}
-      <section id="calculator-roi" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-blue-50">
+      <section id="calculator-roi" className="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
