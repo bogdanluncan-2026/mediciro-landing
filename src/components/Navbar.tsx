@@ -57,7 +57,13 @@ export default function Navbar({ onDocsClick }: { onDocsClick?: () => void }) {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-gray-600 hover:text-ink transition-colors duration-200"
+                  className={
+                    (link as any).highlight
+                      // Alt public decat restul meniului (clinici, nu pacienti): il scoatem
+                      // din sirul de ancore ca sa nu treaca neobservat.
+                      ? 'text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors duration-200'
+                      : 'text-sm font-medium text-gray-600 hover:text-ink transition-colors duration-200'
+                  }
                 >
                   {link.label}
                 </a>
@@ -153,7 +159,11 @@ export default function Navbar({ onDocsClick }: { onDocsClick?: () => void }) {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-sm font-medium text-gray-700 hover:text-ink py-1"
+                    className={
+                      (link as any).highlight
+                        ? 'text-sm font-semibold text-blue-600 hover:text-blue-700 py-1'
+                        : 'text-sm font-medium text-gray-700 hover:text-ink py-1'
+                    }
                   >
                     {link.label}
                   </a>

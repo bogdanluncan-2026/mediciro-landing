@@ -13,6 +13,11 @@
   "navbar": {
     "links": [
       {
+        "label": "Pentru clinici",
+        "href": "/clinici",
+        "highlight": true
+      },
+      {
         "label": "Funcționalități",
         "href": "#features"
       },
@@ -562,6 +567,10 @@
       {
         "title": "Produs",
         "links": [
+          {
+            "label": "Pentru clinici",
+            "href": "/clinici"
+          },
           {
             "label": "Funcționalități",
             "href": "#features"

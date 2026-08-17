@@ -24,6 +24,7 @@ export type CtaLocation =
   | 'clinici_features'
   | 'clinici_pricing'
   | 'clinici_calculator'
+  | 'homepage_clinics_band'
   | 'clinici_final_cta'
   // Navbar & overlays
   | 'navbar_login'

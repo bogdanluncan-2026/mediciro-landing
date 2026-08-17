@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import ClinicsBand from './components/ClinicsBand'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import Teleconsult from './components/Teleconsult'
@@ -55,6 +56,7 @@ function HomePage() {
         <DocsOverlay onClose={closeDocs} />
       ) : (
         <>
+          <ClinicsBand />
           <Navbar onDocsClick={openDocs} />
           <main>
             <Hero />
