@@ -465,6 +465,18 @@ export default function CliniciLanding() {
             </p>
           </div>
           <RoiCalculator />
+          <div className="text-center mt-10">
+            <a
+              href={hero.primaryCta.href}
+              onClick={() => trackCta('Începe gratuit', 'clinici_calculator', hero.primaryCta.href)}
+              className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200"
+            >
+              Începe gratuit — 30 de zile
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
           <p className="max-w-3xl mx-auto text-center text-xs text-gray-400 mt-8 leading-relaxed">
             Estimări orientative — depind de volumul, tarifele și rata reală de neprezentare a clinicii. Nu sunt incluse:
             timpul economisit al medicului, deplasările evitate la centrele de tratament și valoarea pe termen lung a

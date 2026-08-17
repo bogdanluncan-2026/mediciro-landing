@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { trackEvent } from '../utils/analytics'
 
 /**
  * Calculator ROI interactiv pentru clinici.
@@ -80,6 +81,14 @@ export default function RoiCalculator() {
   const [dur, setDur] = useState(30)
   const [rate, setRate] = useState(150)
 
+  // Track prima interactiune cu calculatorul (o singura data per montare)
+  const engaged = useRef(false)
+  const markEngaged = () => {
+    if (engaged.current) return
+    engaged.current = true
+    trackEvent('calculator_engaged', { location: 'clinici' })
+  }
+
   // Fara remindere = fara reducere de neprezentari
   const effRed = notif > 0 ? red : 0
 
@@ -103,7 +112,7 @@ export default function RoiCalculator() {
   return (
     <div className="grid md:grid-cols-2 gap-6 items-start">
       {/* ── Inputs ─────────────────────────────────────────── */}
-      <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+      <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm" onPointerDown={markEngaged}>
         <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4">Datele clinicii tale</p>
 
         <SubHead first>Programări</SubHead>

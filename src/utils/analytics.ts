@@ -23,6 +23,7 @@ export type CtaLocation =
   | 'clinici_how_it_works'
   | 'clinici_features'
   | 'clinici_pricing'
+  | 'clinici_calculator'
   | 'clinici_final_cta'
   // Navbar & overlays
   | 'navbar_login'
@@ -44,4 +45,12 @@ export function trackCta(text: string, location: CtaLocation, destination: strin
     cta_location: location,
     cta_destination: destination,
   })
+}
+
+/**
+ * Track a generic custom event (forwarded to GA4 if a matching GTM
+ * Custom Event trigger exists). Used e.g. for `calculator_engaged`.
+ */
+export function trackEvent(event: string, params: Record<string, unknown> = {}): void {
+  window.dataLayer?.push({ event, ...params })
 }

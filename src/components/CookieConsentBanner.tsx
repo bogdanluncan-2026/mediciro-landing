@@ -24,8 +24,8 @@ export default function CookieConsentBanner() {
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:px-6 lg:px-8">
         {/* Message */}
         <p className="flex-1 text-sm leading-relaxed text-gray-600">
-          Folosim cookie-uri pentru a analiza traficul și a îmbunătăți experiența pe site.
-          Nu colectăm date personale fără acordul dvs.{' '}
+          Folosim cookie-uri pentru statistici despre cum este folosit site-ul, ca să-l facem mai bun.
+          Nu îți vindem datele, iar alegerea îți aparține.{' '}
           <a
             href="https://app.mediciro.ro/cookies"
             target="_blank"
