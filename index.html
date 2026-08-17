@@ -107,6 +107,33 @@
       } catch (e) { /* localStorage blocked (incognito strict mode) */ }
     </script>
 
+    <!--
+      Meta Pixel — incarcat DOAR dupa consimtamant.
+      Codul dat de Facebook porneste la incarcarea paginii si scrie cookie-ul _fbp
+      imediat; aici scriptul nu se descarca deloc pana cand vizitatorul nu accepta,
+      la fel ca tag-urile din GTM. `accept()` din useCookieConsent apeleaza functia
+      de mai jos; daca alegerea a fost facuta intr-o sesiune anterioara, o pornim noi.
+    -->
+    <script>
+      window.__metaPixelLoaded = false;
+      window.loadMetaPixel = function () {
+        if (window.__metaPixelLoaded) return;
+        window.__metaPixelLoaded = true;
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+        (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1447769620733344');
+        fbq('track', 'PageView');
+      };
+      try {
+        if (localStorage.getItem('mediciro_cookie_consent') === 'accepted') {
+          window.loadMetaPixel();
+        }
+      } catch (e) { /* localStorage blocat */ }
+    </script>
+
     <!-- Google Tag Manager (MED-82) — must come AFTER Consent Mode defaults above -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

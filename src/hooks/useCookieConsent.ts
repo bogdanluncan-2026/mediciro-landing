@@ -5,6 +5,8 @@ declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void
     dataLayer?: unknown[]
+    /** Injecteaza Meta Pixel; definita in index.html, apelata doar dupa consimtamant. */
+    loadMetaPixel?: () => void
   }
 }
 
@@ -48,6 +50,8 @@ export function useCookieConsent() {
     } catch { /* ignore */ }
     setConsent('accepted')
     updateGtagConsent(true)
+    // Meta Pixel nu e incarcat pana aici; abia acum are voie sa scrie cookie-uri.
+    window.loadMetaPixel?.()
   }, [])
 
   const decline = useCallback(() => {
