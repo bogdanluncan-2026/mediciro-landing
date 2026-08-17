@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import DocsOverlay from './components/DocsOverlay'
 import WhatsAppButton from './components/WhatsAppButton'
 import CliniciLanding from './pages/CliniciLanding'
+import RoiEmbed from './pages/RoiEmbed'
 import CookieConsentBanner from './components/CookieConsentBanner'
 import { useSeo } from './hooks/useSeo'
 
@@ -74,14 +75,21 @@ function HomePage() {
 }
 
 export default function App() {
+  // Ruta de embed e afisata in <iframe> pe alt site. Consimtamantul pentru cookie-uri
+  // il cere gazda, nu pagina inclusa: un banner in interiorul unei ferestre mici e si
+  // inutil (nu acopera site-ul pe care se afla omul), si derutant.
+  const isEmbed = useLocation().pathname === '/calculator-roi'
+
   return (
     <>
       <Routes>
         <Route path="/clinici" element={<CliniciLanding />} />
+        {/* Calculatorul singur, pentru includere prin iframe (codelium.ro). */}
+        <Route path="/calculator-roi" element={<RoiEmbed />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
       {/* Cookie consent banner — rendered once, outside routes, so it persists on all pages */}
-      <CookieConsentBanner />
+      {!isEmbed && <CookieConsentBanner />}
     </>
   )
 }
