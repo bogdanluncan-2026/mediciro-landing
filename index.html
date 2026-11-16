@@ -4,149 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Software de programări online și teleconsultații pentru clinici private din România. Pacienții se programează singuri 24/7. Mai puține neprezentări. 30 de zile gratuit." />
-    <meta name="keywords" content="software programari clinica, platforma programari online clinica, sistem programari clinica privata, aplicatie programari medic, programari online clinici Oradea, teleconsultatii, mediciro" />
-    <meta name="robots" content="index, follow" />
+    <!-- MediciRO closed in November 2026. No analytics, no Meta Pixel, no cookies:
+         the previous tags (GTM, Consent Mode, Meta Pixel) are in the git history. -->
+    <meta name="description" content="Platforma MediciRO nu mai este disponibilă din noiembrie 2026." />
+    <meta name="robots" content="noindex, follow" />
     <link rel="canonical" href="https://mediciro.ro/" />
-    <meta property="og:title" content="MediciRO — Programări online & teleconsultații pentru clinici" />
-    <meta property="og:description" content="Software de programări online și teleconsultații pentru clinici private din România. Pacienții se programează singuri 24/7. 30 de zile gratuit." />
+    <meta property="og:title" content="MediciRO și-a încetat activitatea" />
+    <meta property="og:description" content="Platforma MediciRO nu mai este disponibilă din noiembrie 2026." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mediciro.ro/" />
     <meta property="og:site_name" content="MediciRO" />
     <meta property="og:locale" content="ro_RO" />
-    <!-- 1200x627 (~1,91:1), raportul cardului de pe Facebook/LinkedIn. Inainte arata
-         spre hero-background.png: o ilustratie generica, in plus 1,5:1, deci si taiata.
-         La orice modificare a imaginii schimba SI numele fisierului (-v3, -v4): retelele
-         o tin in cache dupa adresa, iar o versiune noua cu acelasi nume nu ajunge niciodata
-         la cititori. -->
-    <meta property="og:image" content="https://mediciro.ro/mediciro-og-v2.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="627" />
-    <meta property="og:image:alt" content="MediciRO — programări online pentru clinici private" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MediciRO — Programări online & teleconsultații pentru clinici" />
-    <meta name="twitter:description" content="Software de programări online și teleconsultații pentru clinici private din România. Pacienții se programează singuri 24/7. 30 de zile gratuit." />
-    <meta name="twitter:image" content="https://mediciro.ro/mediciro-og-v2.png" />
-
-    <!-- Structured data (schema.org) — entitate brand + aplicație SaaS -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "MediciRO",
-      "legalName": "CODELIUM S.R.L.",
-      "url": "https://mediciro.ro",
-      "logo": "https://mediciro.ro/logo.svg",
-      "description": "Platformă de programări medicale online și teleconsultații pentru clinici private din România.",
-      "areaServed": "RO",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "contact@mediciro.ro",
-        "contactType": "customer support",
-        "availableLanguage": ["ro"]
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "MediciRO",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web, Android, iOS",
-      "url": "https://mediciro.ro",
-      "description": "Software de programări online, teleconsultații și management pentru clinici private: orar pe doctori, notificări automate, plăți și facturare.",
-      "offers": {
-        "@type": "Offer",
-        "price": "100",
-        "priceCurrency": "RON",
-        "description": "Abonament lunar BASIC. Planuri PRO și ENTERPRISE disponibile."
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "CODELIUM S.R.L."
-      }
-    }
-    </script>
+    <meta name="twitter:title" content="MediciRO și-a încetat activitatea" />
+    <meta name="twitter:description" content="Platforma MediciRO nu mai este disponibilă din noiembrie 2026." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <title>MediciRO — Programări online & teleconsultații pentru clinici</title>
-
-    <!--
-      GTM Consent Mode v2 — MED-83
-      Must run BEFORE the GTM snippet (added in MED-82) so that tags fire
-      only after user consents. Defaults all storage to 'denied'.
-      If the user already accepted in a previous session, we restore consent
-      immediately so GTM fires correctly on subsequent page loads.
-    -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-
-      // Step 1: deny everything by default
-      gtag('consent', 'default', {
-        analytics_storage: 'denied',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        wait_for_update: 500
-      });
-
-      // Step 2: restore previous session consent (runs before React & GTM load)
-      try {
-        var storedConsent = localStorage.getItem('mediciro_cookie_consent');
-        if (storedConsent === 'accepted') {
-          gtag('consent', 'update', {
-            analytics_storage: 'granted',
-            ad_storage: 'granted',
-            ad_user_data: 'granted',
-            ad_personalization: 'granted'
-          });
-        }
-      } catch (e) { /* localStorage blocked (incognito strict mode) */ }
-    </script>
-
-    <!--
-      Meta Pixel — incarcat DOAR dupa consimtamant.
-      Codul dat de Facebook porneste la incarcarea paginii si scrie cookie-ul _fbp
-      imediat; aici scriptul nu se descarca deloc pana cand vizitatorul nu accepta,
-      la fel ca tag-urile din GTM. `accept()` din useCookieConsent apeleaza functia
-      de mai jos; daca alegerea a fost facuta intr-o sesiune anterioara, o pornim noi.
-    -->
-    <script>
-      window.__metaPixelLoaded = false;
-      window.loadMetaPixel = function () {
-        if (window.__metaPixelLoaded) return;
-        window.__metaPixelLoaded = true;
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-        (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1447769620733344');
-        fbq('track', 'PageView');
-      };
-      try {
-        if (localStorage.getItem('mediciro_cookie_consent') === 'accepted') {
-          window.loadMetaPixel();
-        }
-      } catch (e) { /* localStorage blocat */ }
-    </script>
-
-    <!-- Google Tag Manager (MED-82) — must come AFTER Consent Mode defaults above -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TKQZR5TM');</script>
-    <!-- End Google Tag Manager -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>MediciRO și-a încetat activitatea</title>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) — for browsers with JavaScript disabled -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQZR5TM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

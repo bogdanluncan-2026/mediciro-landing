@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://mediciro.ro/sitemap.xml
